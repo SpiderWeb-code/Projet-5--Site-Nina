@@ -101,13 +101,17 @@ body {
 .gallery .nav {
 	justify-content: center;
 }
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-	color: #fff;
-	background-color: #BEB45A;
-	border-radius:0 ;
+/************************************************************************* Réctification du changement de couleur des filtres ****************************************/
+/*Je précise le chnagement sur la class="active-tag" et pas seulement "active"*/
+.nav-pills .nav-link.active-tag{
+	background-color: red;
 }
+/*********************************************************************************************************************************************************************/
 .nav-pills .nav-link {
-	color: #000
+	color: #000000;
+	/*Ajout d'un pointer sur les filtres*/
+	cursor: pointer;
+	/************************************/
 }
 .item-column {
 	position: relative;
