@@ -56,7 +56,7 @@
         return;
       }
     });
-
+    //Bouton Avent Aprés sur la Modale
     $(".gallery").on("click", ".nav-link", $.fn.mauGallery.methods.filterByTag);
     $(".gallery").on("click", ".mg-prev", () =>
       $.fn.mauGallery.methods.prevImage(options.lightboxId)
