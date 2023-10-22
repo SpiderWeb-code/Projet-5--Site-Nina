@@ -216,6 +216,25 @@ body {
 	flex : 2;
 }
 
+/************************************************************** Changement couleur fléche **************************************************/
+.carousel-control-next span{
+	background-color: grey;
+	height: 37px;
+	width: 37px;
+	border: 5px solid grey;
+	border-radius: 5px;
+}
+
+.carousel-control-prev span{
+	background-color: gray;
+	height: 37px;
+	width: 37px;
+	border: 5px solid grey;
+	border-radius: 5px;
+}
+
+/*******************************************************************************************************************************************/
+
 form {
 	display: flex;
 	flex-direction: column;
