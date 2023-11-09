@@ -37,14 +37,23 @@ for (let i = 0; i < cheminsDesImages.length; i++) {
 
 // Sélectionnez chaque élément par son ID
 const element1 = document.getElementById("image-0");
+element1.setAttribute("alt", "photographie de concert, photographe de concert, photographie concert")
 const element2 = document.getElementById("image-1");
+element2.setAttribute("alt", "photographe entreprise, photographe pour entreprise, photo d'entreprise")
 const element3 = document.getElementById("image-2");
+element3.setAttribute("alt", "photographie en entreprise, photographe en mileux professionnel, photo en entreprise")
 const element4 = document.getElementById("image-3");
+element4.setAttribute("alt", "photographe mariage, photo mariage pour tous, photo pour mariage")
 const element5 = document.getElementById("image-4");
+element5.setAttribute("alt", "photo pour instagram, photographe pour mannequin, photo pour reseau sociaux")
 const element6 = document.getElementById("image-5");
+element4.setAttribute("alt", "photo de mariage, photo de mariage professionnel, photographie de qualité")
 const element7 = document.getElementById("image-6");
+element7.setAttribute("alt", "photo de portrait, photographie de personnes, photo réussie")
 const element8 = document.getElementById("image-7");
+element8.setAttribute("alt", "photographie d'un concert, photographe pour célébrités, photo spéctacle")
 const element9 = document.getElementById("image-8");
+element9.setAttribute("alt", "photographe pour millieu professionnel, photographie pour personnels d'entreprise, photo pour personnels d'entreprise")
 ////////////////////////////////////////////////////////////////////////////////////// Filtres les Images //////////////////////////////////////////////////////////////////////////
 const boutonTous = document.getElementById("bouton-Tous");
 function tous(){
