@@ -21,8 +21,12 @@ body {max-width: 1920px;margin: auto;}
 .nav-pills .nav-link {color: #000000;cursor: pointer;}
 /*Mise en place du style CSS pour les Boutons Filtres*/
 #container-filter{display: flex; justify-content: center; flex-wrap: wrap; margin-bottom: 40px; gap: 10px;}
-#container-filter button{padding-right: 16px; padding-left: 16px; padding-bottom: 8px; padding-top: 8px; background-color: white; border: none;}
-#container-filter button:active{background-color: #BEB45A;}
+.ensemble-boutons{border-right: 16px solid white; border-left: 16px solid white; border-bottom: 8px solid white; border-top: 8px solid white; background-color: white;;}
+/*Activation du changement de couleurs*/
+.ensemble-boutons.active{
+    background-color: #BEB45A; /* Couleur quand le bouton est actif */
+    border-color: #BEB45A;
+  }
 /*****************************************************/
 /*Ajout pour donner un style au container des images*/
 #gallery-image{ display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; width: 100%;}

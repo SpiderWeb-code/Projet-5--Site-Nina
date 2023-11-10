@@ -13,9 +13,21 @@ for (let i = 0; i < nomsDesBoutons.length; i++) {
   
   // Créez un ID unique en combinant le nom du bouton et la valeur de i
   bouton.id = `bouton-${nomsDesBoutons[i]}`;
+  bouton.className = "ensemble-boutons"
   
   boutonsContainer.appendChild(bouton);
 }
+//////////////////////////////////////////////////////////////////////////////Changement de couleurs des boutons///////////////////////////////////////////////////////
+  const couleursBoutons = document.querySelectorAll('.ensemble-boutons');
+
+couleursBoutons.forEach(bouton => {
+  bouton.addEventListener('click', function() {
+    // Retire la classe active de tous les boutons
+    couleursBoutons.forEach(b => b.classList.remove('active'));
+    //Ajoute "active" a la class
+    this.classList.add('active');
+  });
+});
 
 /////////////////////////////////////////////////////////////////////// Création des images ///////////////////////////////////////////////////////////////////////////
 
