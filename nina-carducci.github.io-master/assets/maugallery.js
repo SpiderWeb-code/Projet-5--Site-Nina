@@ -32,7 +32,9 @@ couleursBoutons.forEach(bouton => {
 /////////////////////////////////////////////////////////////////////// Création des images ///////////////////////////////////////////////////////////////////////////
 
 // Récupérez l'élément parent des images
-const imagesContainer = document.getElementById("gallery-image");
+const imagesContainer = document.getElementById("div-container_gallery");
+const picture = document.createElement("picture");
+picture.id="gallery-image";
 
 // Tableau contenant les chemins des images
 const cheminsDesImages = ["./assets/image/image-concert/concert-image.webp", "./assets/image/image-entreprise/entreprise-image.webp", "./assets/image/image-entreprise/deuxiéme-image-entreprise.webp", "./assets/image/image-mariage/mariage-image.webp", "./assets/image/image-portraits/image-portraits.webp", "./assets/image/image-mariage/deuxieme-image-mariage.webp", "./assets/image/image-portraits/deuxieme-image-portraits.webp", "./assets/image/image-concert/deuxième-image-concert.webp", "./assets/image/image-entreprise/troisiéme-image-entreprise.webp",];
@@ -44,8 +46,9 @@ for (let i = 0; i < cheminsDesImages.length; i++) {
   // Créez un ID unique pour chaque image en utilisant la valeur de i
   image.id = `image-${i}`;
   image.className ="images_gallery"
-  imagesContainer.appendChild(image);
+  picture.appendChild(image);
 }
+imagesContainer.appendChild(picture);
 
 // Sélectionnez chaque élément par son ID
 const element1 = document.getElementById("image-0");
