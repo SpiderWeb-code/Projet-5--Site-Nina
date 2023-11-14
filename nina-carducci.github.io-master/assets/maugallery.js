@@ -32,25 +32,28 @@ couleursBoutons.forEach(bouton => {
 /////////////////////////////////////////////////////////////////////// Création des images ///////////////////////////////////////////////////////////////////////////
 
 // Récupérez l'élément parent des images
-const imagesContainer = document.getElementById("div-container_gallery");
-const picture = document.createElement("picture");
-picture.id="gallery-image";
+const imagesContainer = document.getElementById("gallery-image");
 
 // Tableau contenant les chemins des images
 const cheminsDesImages = ["./assets/image/image-concert/concert-image.webp", "./assets/image/image-entreprise/entreprise-image.webp", "./assets/image/image-entreprise/deuxiéme-image-entreprise.webp", "./assets/image/image-mariage/mariage-image.webp", "./assets/image/image-portraits/image-portraits.webp", "./assets/image/image-mariage/deuxieme-image-mariage.webp", "./assets/image/image-portraits/deuxieme-image-portraits.webp", "./assets/image/image-concert/deuxième-image-concert.webp", "./assets/image/image-entreprise/troisiéme-image-entreprise.webp",];
 
 // Créez des images et ajoutez-les à la page en utilisant une boucle
 for (let i = 0; i < cheminsDesImages.length; i++) {
+  const picture = document.createElement("picture")
+  const source = document.createElement("source");
   const image = document.createElement("img");
   image.src = cheminsDesImages[i]; // Utilisez le chemin de l'image
   // Créez un ID unique pour chaque image en utilisant la valeur de i
   image.id = `image-${i}`;
-  image.className ="images_gallery"
+  image.className ="images_gallery";
+  picture.id = `picture-${i}`;
+  imagesContainer.appendChild(picture)
+  picture.appendChild(source);
   picture.appendChild(image);
 }
 imagesContainer.appendChild(picture);
 
-// Sélectionnez chaque élément par son ID
+// Sélectionnez chaque élément par son ID et lui donne un texte alternatif différents a chaques images
 const element1 = document.getElementById("image-0");
 element1.setAttribute("alt", "photographie de concert, photographe de concert, photographie concert")
 const element2 = document.getElementById("image-1");
