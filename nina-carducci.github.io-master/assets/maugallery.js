@@ -47,11 +47,11 @@ for (let i = 0; i < cheminsDesImages.length; i++) {
   image.id = `image-${i}`;
   image.className ="images_gallery";
   picture.id = `picture-${i}`;
-  imagesContainer.appendChild(picture)
   picture.appendChild(source);
   picture.appendChild(image);
+  imagesContainer.appendChild(picture)
 }
-imagesContainer.appendChild(picture);
+
 
 // Sélectionnez chaque élément par son ID et lui donne un texte alternatif différents a chaques images
 const element1 = document.getElementById("image-0");
