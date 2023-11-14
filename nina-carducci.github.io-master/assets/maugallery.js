@@ -71,80 +71,90 @@ element7.setAttribute("alt", "photo de portrait, photographie de personnes, phot
 const element8 = document.getElementById("image-7");
 element8.setAttribute("alt", "photographie d'un concert, photographe pour célébrités, photo spéctacle")
 const element9 = document.getElementById("image-8");
-element9.setAttribute("alt", "photographe pour millieu professionnel, photographie pour personnels d'entreprise, photo pour personnels d'entreprise")
+element9.setAttribute("alt", "photographe pour millieu professionnel, photographie pour personnels d'entreprise, photo pour personnels d'entreprise");
+// Sélectionne les balises <picture> en fonction de leurs ID
+const picture1 = document.getElementById("picture-0")
+const picture2 = document.getElementById("picture-1")
+const picture3 = document.getElementById("picture-2")
+const picture4 = document.getElementById("picture-3")
+const picture5 = document.getElementById("picture-4")
+const picture6 = document.getElementById("picture-5")
+const picture7 = document.getElementById("picture-6")
+const picture8 = document.getElementById("picture-7")
+const picture9 = document.getElementById("picture-8")
 ////////////////////////////////////////////////////////////////////////////////////// Filtres les Images //////////////////////////////////////////////////////////////////////////
 const boutonTous = document.getElementById("bouton-Tous");
 function tous(){
 boutonTous.addEventListener("click", function (){
-    element1.style.display="initial";
-    element2.style.display="initial";
-    element3.style.display="initial";
-    element4.style.display="initial";
-    element5.style.display="initial";
-    element6.style.display="initial";
-    element7.style.display="initial";
-    element8.style.display="initial";
-    element9.style.display="initial";
+    picture1.style.display="initial";
+    picture2.style.display="initial";
+    picture3.style.display="initial";
+    picture4.style.display="initial";
+    picture5.style.display="initial";
+    picture6.style.display="initial";
+    picture7.style.display="initial";
+    picture8.style.display="initial";
+    picture9.style.display="initial";
 })
 };
 
 const boutonConcert = document.getElementById("bouton-Concert");
 function concert(){
 boutonConcert.addEventListener("click", function (){
-    element1.style.display="initial";
-    element2.style.display="none";
-    element3.style.display="none";
-    element4.style.display="none";
-    element5.style.display="none";
-    element6.style.display="none";
-    element7.style.display="none";
-    element8.style.display="initial";
-    element9.style.display="none";
+    picture1.style.display="initial";
+    picture2.style.display="none";
+    picture3.style.display="none";
+    picture4.style.display="none";
+    picture5.style.display="none";
+    picture6.style.display="none";
+    picture7.style.display="none";
+    picture8.style.display="initial";
+    picture9.style.display="none";
 })
 };
 
 const boutonEntreprise = document.getElementById("bouton-Entreprises");
 function entreprise(){
 boutonEntreprise.addEventListener("click", function (){
-    element1.style.display="none";
-    element2.style.display="initial";
-    element3.style.display="initial";
-    element4.style.display="none";
-    element5.style.display="none";
-    element6.style.display="none";
-    element7.style.display="none";
-    element8.style.display="none";
-    element9.style.display="initial";
+    picture1.style.display="none";
+    picture2.style.display="initial";
+    picture3.style.display="initial";
+    picture4.style.display="none";
+    picture5.style.display="none";
+    picture6.style.display="none";
+    picture7.style.display="none";
+    picture8.style.display="none";
+    picture9.style.display="initial";
 })
 };
 
 const boutonMariage = document.getElementById("bouton-Mariages");
 function mariage(){
 boutonMariage.addEventListener("click", function (){
-    element1.style.display="none";
-    element2.style.display="none";
-    element3.style.display="none";
-    element4.style.display="initial";
-    element5.style.display="none";
-    element6.style.display="initial";
-    element7.style.display="none";
-    element8.style.display="none";
-    element9.style.display="none";
+    picture1.style.display="none";
+    picture2.style.display="none";
+    picture3.style.display="none";
+    picture4.style.display="initial";
+    picture5.style.display="none";
+    picture6.style.display="initial";
+    picture7.style.display="none";
+    picture8.style.display="none";
+    picture9.style.display="none";
 })
 };
 
 const boutonPortrait = document.getElementById("bouton-Portrait");
 function portrait(){
 boutonPortrait.addEventListener("click", function (){
-    element1.style.display="none";
-    element2.style.display="none";
-    element3.style.display="none";
-    element4.style.display="none";
-    element5.style.display="initial";
-    element6.style.display="none";
-    element7.style.display="initial";
-    element8.style.display="none";
-    element9.style.display="none";
+    picture1.style.display="none";
+    picture2.style.display="none";
+    picture3.style.display="none";
+    picture4.style.display="none";
+    picture5.style.display="initial";
+    picture6.style.display="none";
+    picture7.style.display="initial";
+    picture8.style.display="none";
+    picture9.style.display="none";
 })
 };
 if(boutonTous.click){
