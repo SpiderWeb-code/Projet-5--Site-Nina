@@ -36,7 +36,7 @@ const imagesContainer = document.getElementById("gallery-image");
 
 // Tableau contenant les chemins des images
 const cheminsDesImages = ["./assets/image/image-concert/concert-image.webp", "./assets/image/image-entreprise/entreprise-image.webp", "./assets/image/image-entreprise/deuxiéme-image-entreprise.webp", "./assets/image/image-mariage/mariage-image.webp", "./assets/image/image-portraits/image-portraits.webp", "./assets/image/image-mariage/deuxieme-image-mariage.webp", "./assets/image/image-portraits/deuxieme-image-portraits.webp", "./assets/image/image-concert/deuxième-image-concert.webp", "./assets/image/image-entreprise/troisiéme-image-entreprise.webp",];
-
+const cheminsImageMin = ["./assets/image-min/image-concert.min/concert-image.webp", "./assets/image-min/image-entreprise.min/entreprise-image.webp", "./assets/image-min/image-entreprise.min/deuxiéme-image-entreprise.webp", "./assets/image-min/image-mariage.min/mariage-image.webp", "./assets/image-min/image-portraits.min/image-portraits.webp", "./assets/image-min/image-mariage.min/deuxieme-image-mariage.webp", "./assets/image-min/image-portraits.min/deuxieme-image-portraits.webp", "./assets/image-min/image-concert.min/deuxième-image-concert.webp", "./assets/image-min/image-entreprise.min/troisiéme-image-entreprise.webp"];
 // Créez des images et ajoutez-les à la page en utilisant une boucle
 for (let i = 0; i < cheminsDesImages.length; i++) {
   const picture = document.createElement("picture")
@@ -46,6 +46,8 @@ for (let i = 0; i < cheminsDesImages.length; i++) {
   // Créez un ID unique pour chaque image en utilisant la valeur de i
   image.id = `image-${i}`;
   image.className ="images_gallery";
+  source.id = `source-${i}`;
+  source.setAttribute("media", "(max-width: 900px)");
   picture.id = `picture-${i}`;
   picture.appendChild(source);
   picture.appendChild(image);
@@ -82,7 +84,27 @@ const picture6 = document.getElementById("picture-5")
 const picture7 = document.getElementById("picture-6")
 const picture8 = document.getElementById("picture-7")
 const picture9 = document.getElementById("picture-8")
-////////////////////////////////////////////////////////////////////////////////////// Filtres les Images //////////////////////////////////////////////////////////////////////////
+
+//Les Sources
+const source1 = document.getElementById("source-0");
+source1.setAttribute("srcset", cheminsImageMin[0]);
+const source2 = document.getElementById("source-1");
+source2.setAttribute("srcset", cheminsImageMin[1]);
+const source3 = document.getElementById("source-2");
+source3.setAttribute("srcset", cheminsImageMin[2]);
+const source4 = document.getElementById("source-3");
+source4.setAttribute("srcset", cheminsImageMin[3]);
+const source5 = document.getElementById("source-4");
+source5.setAttribute("srcset", cheminsImageMin[4]);
+const source6 = document.getElementById("source-5");
+source6.setAttribute("srcset", cheminsImageMin[5]);
+const source7 = document.getElementById("source-6");
+source7.setAttribute("srcset", cheminsImageMin[6]);
+const source8 = document.getElementById("source-7");
+source8.setAttribute("srcset", cheminsImageMin[7]);
+const source9 = document.getElementById("source-8");
+source9.setAttribute("srcset", cheminsImageMin[8]);
+//////////////////////////////////////////////////////////////// Filtres les Images //////////////////////////////////////////////////////////////////////////
 const boutonTous = document.getElementById("bouton-Tous");
 function tous(){
 boutonTous.addEventListener("click", function (){
