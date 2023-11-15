@@ -54,6 +54,9 @@ for (let i = 0; i < cheminsDesImages.length; i++) {
   imagesContainer.appendChild(picture)
 }
 
+//Si je clique sur une image, ouverture de la modale
+
+
 
 // Sélectionnez chaque élément par son ID et lui donne un texte alternatif différents a chaques images
 const element1 = document.getElementById("image-0");
@@ -67,7 +70,7 @@ element4.setAttribute("alt", "photographe mariage, photo mariage pour tous, phot
 const element5 = document.getElementById("image-4");
 element5.setAttribute("alt", "photo pour instagram, photographe pour mannequin, photo pour reseau sociaux")
 const element6 = document.getElementById("image-5");
-element4.setAttribute("alt", "photo de mariage, photo de mariage professionnel, photographie de qualité")
+element6.setAttribute("alt", "photo de mariage, photo de mariage professionnel, photographie de qualité")
 const element7 = document.getElementById("image-6");
 element7.setAttribute("alt", "photo de portrait, photographie de personnes, photo réussie")
 const element8 = document.getElementById("image-7");
