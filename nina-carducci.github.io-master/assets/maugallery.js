@@ -1,5 +1,5 @@
 ///////////////////////////////////////////////////////////////////////  Création des boutons /////////////////////////////////////////////////////////////////////
-
+const body = document.getElementsByTagName("body");
 // Récupérez l'élément parent des boutons
 const boutonsContainer = document.getElementById("container-filter");
 
@@ -39,7 +39,7 @@ const cheminsDesImages = ["./assets/image/image-concert/concert-image.webp", "./
 const cheminsImageMin = ["./assets/image-min/image-concert.min/concert-image.webp", "./assets/image-min/image-entreprise.min/entreprise-image.webp", "./assets/image-min/image-entreprise.min/deuxiéme-image-entreprise.webp", "./assets/image-min/image-mariage.min/mariage-image.webp", "./assets/image-min/image-portraits.min/image-portraits.webp", "./assets/image-min/image-mariage.min/deuxieme-image-mariage.webp", "./assets/image-min/image-portraits.min/deuxieme-image-portraits.webp", "./assets/image-min/image-concert.min/deuxième-image-concert.webp", "./assets/image-min/image-entreprise.min/troisiéme-image-entreprise.webp"];
 // Créez des images et ajoutez-les à la page en utilisant une boucle
 for (let i = 0; i < cheminsDesImages.length; i++) {
-  const picture = document.createElement("picture")
+  const picture = document.createElement("picture");
   const source = document.createElement("source");
   const image = document.createElement("img");
   image.src = cheminsDesImages[i]; // Utilisez le chemin de l'image
@@ -49,14 +49,31 @@ for (let i = 0; i < cheminsDesImages.length; i++) {
   source.id = `source-${i}`;
   source.setAttribute("media", "(max-width: 900px)");
   picture.id = `picture-${i}`;
+  picture.className = "all-pictures"
   picture.appendChild(source);
   picture.appendChild(image);
   imagesContainer.appendChild(picture)
 }
 
-//Si je clique sur une image, ouverture de la modale
+// Activation de la functon au clique sur une image, ouverture de la modale
+function openModal(){
+  console.log("Picture Cliqué");
+  modal.style.display = "block";
+  overlay.style.display = "block";
+  overlay.addEventListener("click", function(){
+    closeModal()
+  })
+}
+function closeModal(){
+  modal.style.display = "none";
+  overlay.style.display = "none";
+}
 
-
+//Rend les picture activable pour ouvrire la modal
+const allPictures = document.querySelectorAll(".all-pictures");
+allPictures.forEach(function(event){
+  event.addEventListener("click", openModal);
+});
 
 // Sélectionnez chaque élément par son ID et lui donne un texte alternatif différents a chaques images
 const element1 = document.getElementById("image-0");
@@ -212,3 +229,32 @@ if(boutonPortrait.click){
   console.log('Erreur: Le clique sur le bouton "Portrait" n`a pas pu se faire');
   alert('une erreur est survenue sur le bouton "Portrait", si le probléme perciste, merci de contacter Sophie au *05 56 67 78 89*')
 }
+
+// Créer l'overlay
+var overlay = document.createElement("div");
+overlay.id = "overlay";
+overlay.style.display = "none";
+overlay.style.position = "fixed";
+overlay.style.top = "0";
+overlay.style.left = "0";
+overlay.style.width = "100%";
+overlay.style.height = "100%";
+overlay.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
+overlay.style.zIndex = "1";
+document.body.appendChild(overlay);
+
+//Création de la Modal
+var modal = document.createElement("div");
+    modal.id = "myModal";
+    modal.style.display = "none";
+    modal.style.position = "fixed";
+    modal.style.top = "50%";
+    modal.style.left = "50%";
+    modal.style.transform = "translate(-50%, -50%)";
+    modal.style.padding = "20px";
+    modal.style.backgroundColor = "white";
+    modal.style.border = "1px solid #ccc";
+    modal.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.1)";
+    modal.style.zIndex = "2";
+    modal.innerHTML = `<p>Contenu de la modal</p><button onclick="closeModal()">Fermer</button>`;
+    imagesContainer.appendChild(modal);
