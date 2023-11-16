@@ -1,5 +1,5 @@
 ///////////////////////////////////////////////////////////////////////  Création des boutons /////////////////////////////////////////////////////////////////////
-const body = document.getElementsByTagName("body");
+
 // Récupérez l'élément parent des boutons
 const boutonsContainer = document.getElementById("container-filter");
 
@@ -185,16 +185,15 @@ boutonPortrait.addEventListener("click", function (){
     picture9.style.display="none";
 })
 };
-//Création des function qui servent a filtrer les images de la modal
 
 // Activation de la functon au clique sur une image, ouverture de la modale
-const imageModal = document.getElementById("image-modal");
+const header = document.getElementById("id_top-header");
 function openModal(){
   console.log("Picture Cliqué");
   modal.style.display = "block";
   overlay.style.display = "block";
   header.style.zIndex = "0";
-  //Appeler des functions qui dirons quel images mettre selon la ou l'on a cliqué
+  //Ferme la modal
   overlay.addEventListener("click", function(){
     closeModal()
   })
@@ -265,5 +264,84 @@ var modal = document.createElement("div");
     modal.style.maxWidth = "498px";
     modal.style.width = "100%";
     modal.style.height = "653.33px";
-    modal.innerHTML = `<img id="image-modal></img>`;
+    modal.innerHTML = `<img id="image-modal"></img>`;
     imagesContainer.appendChild(modal);
+
+    //Ajoute une photo différents dans la modal selon quel picture on a clqué
+    function supprimeImage(){
+      document.getElementById("image-modal").remove
+    };
+    function agrandissementImage1(){
+      const imageModal = document.getElementById("image-modal");
+      imageModal.setAttribute("src", cheminsDesImages[0]);
+    };
+    function agrandissementImage2(){
+      const imageModal = document.getElementById("image-modal");
+      imageModal.setAttribute("src", cheminsDesImages[1]);
+    };
+    function agrandissementImage3(){
+      const imageModal = document.getElementById("image-modal");
+      imageModal.setAttribute("src", cheminsDesImages[2]);
+    };
+    function agrandissementImage4(){
+      const imageModal = document.getElementById("image-modal");
+      imageModal.setAttribute("src", cheminsDesImages[3]);
+    };
+    function agrandissementImage5(){
+      const imageModal = document.getElementById("image-modal");
+      imageModal.setAttribute("src", cheminsDesImages[4]);
+    };
+    function agrandissementImage6(){
+      const imageModal = document.getElementById("image-modal");
+      imageModal.setAttribute("src", cheminsDesImages[5]);
+    };
+    function agrandissementImage7(){
+      const imageModal = document.getElementById("image-modal");
+      imageModal.setAttribute("src", cheminsDesImages[6]);
+    };
+    function agrandissementImage8(){
+      const imageModal = document.getElementById("image-modal");
+      imageModal.setAttribute("src", cheminsDesImages[7]);
+    };
+    function agrandissementImage9(){
+      const imageModal = document.getElementById("image-modal");
+      imageModal.setAttribute("src", cheminsDesImages[8]);
+    };
+
+    //Appeler des functions qui dirons quel images mettre selon la ou l'on a cliqué
+    picture1.addEventListener("click", function(){
+      supprimeImage();
+      agrandissementImage1();
+    });
+    picture2.addEventListener("click", function(){
+      supprimeImage();
+      agrandissementImage2();
+    });
+    picture3.addEventListener("click", function(){
+      supprimeImage();
+      agrandissementImage3();
+    });
+    picture4.addEventListener("click", function(){
+      supprimeImage();
+      agrandissementImage4();
+    });
+    picture5.addEventListener("click", function(){
+      supprimeImage();
+      agrandissementImage5();
+    });
+    picture6.addEventListener("click", function(){
+      supprimeImage();
+      agrandissementImage6();
+    });
+    picture7.addEventListener("click", function(){
+      supprimeImage();
+      agrandissementImage7();
+    });
+    picture8.addEventListener("click", function(){
+      supprimeImage();
+      agrandissementImage8();
+    });
+    picture9.addEventListener("click", function(){
+      supprimeImage();
+      agrandissementImage9();
+    });
