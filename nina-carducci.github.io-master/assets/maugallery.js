@@ -74,7 +74,7 @@ function openModal(){
   modal.style.justifyContent = "center";
   modal.style.alignItems = "center";
   overlay.style.display = "block";
-  header.style.zIndex = "0";
+  header.style.zIndex = "1";
   //Ferme la modal
   overlay.addEventListener("click", function(){
     closeModal()
@@ -288,7 +288,7 @@ overlay.style.left = "0";
 overlay.style.width = "100%";
 overlay.style.height = "100%";
 overlay.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
-overlay.style.zIndex = "1";
+overlay.style.zIndex = "2";
 document.body.appendChild(overlay);
 
 //Création de la Modal
@@ -303,7 +303,7 @@ var modal = document.createElement("div");
     modal.style.backgroundColor = "white";
     modal.style.border = "1px solid #ccc";
     modal.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.1)";
-    modal.style.zIndex = "2";
+    modal.style.zIndex = "3";
     modal.style.maxWidth = "498px";
     modal.style.width = "100%";
     modal.style.height = "653.33px";
