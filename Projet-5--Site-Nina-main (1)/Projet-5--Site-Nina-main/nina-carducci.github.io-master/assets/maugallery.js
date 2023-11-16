@@ -108,7 +108,7 @@ function openModal(){
   boutonDroit.style.padding = "0";
   boutonDroit.style.alignItems = "center";
   boutonDroit.style.justifyContent = "center";
-  boutonDroit.innerHTML = `<i class="fa-solid fa-square-caret-left" style="color: #000000;"></i>`;
+  boutonDroit.innerHTML = `<i class="fa-solid fa-square-caret-left" style="color: #000000;" id="bouton-gauche"></i>`;
   boutonDroit.style.display = "flex";
   boutonGauche.style.display = "flex";
   boutonGauche.style.position = "absolute";
@@ -123,7 +123,7 @@ function openModal(){
   boutonGauche.style.padding = "0px 0px 0px 2px";
   boutonGauche.style.alignItems = "center";
   boutonGauche.style.justifyContent = "center";
-  boutonGauche.innerHTML = `<i class="fa-solid fa-square-caret-right" style="color: #000000;"></i>`;
+  boutonGauche.innerHTML = `<i class="fa-solid fa-square-caret-right" style="color: #000000;" id="bouton-droit"></i>`;
   //Ferme la modal
   overlay.addEventListener("click", function(){
     closeModal()
@@ -142,39 +142,104 @@ function supprimeImage(){
 function agrandissementImage1(){
   const imageModal = document.getElementById("image-modal");
   imageModal.setAttribute("src", cheminsDesImages[0]);
+  let boutonDroit = document.getElementById("bouton-droit");
+  boutonDroit.addEventListener("click", function(){
+    agrandissementImage2()
+  })
 };
 function agrandissementImage2(){
   const imageModal = document.getElementById("image-modal");
   imageModal.setAttribute("src", cheminsDesImages[1]);
+  let boutonDroit = document.getElementById("bouton-droit");
+  boutonDroit.addEventListener("click", function(){
+    agrandissementImage3()
+  })
+  let boutonGauche = document.getElementById("bouton-gauche");
+  boutonGauche.addEventListener("click", function(){
+    agrandissementImage1()
+  })
 };
 function agrandissementImage3(){
   const imageModal = document.getElementById("image-modal");
   imageModal.setAttribute("src", cheminsDesImages[2]);
+  let boutonDroit = document.getElementById("bouton-droit");
+  boutonDroit.addEventListener("click", function(){
+    agrandissementImage4()
+  })
+  let boutonGauche = document.getElementById("bouton-gauche");
+  boutonGauche.addEventListener("click", function(){
+    agrandissementImage2()
+  })
 };
 function agrandissementImage4(){
   const imageModal = document.getElementById("image-modal");
   imageModal.setAttribute("src", cheminsDesImages[3]);
+  let boutonDroit = document.getElementById("bouton-droit");
+  boutonDroit.addEventListener("click", function(){
+    agrandissementImage5()
+  })
+  let boutonGauche = document.getElementById("bouton-gauche");
+  boutonGauche.addEventListener("click", function(){
+    agrandissementImage3()
+  })
 };
 function agrandissementImage5(){
   const imageModal = document.getElementById("image-modal");
   imageModal.setAttribute("src", cheminsDesImages[4]);
+  let boutonDroit = document.getElementById("bouton-droit");
+  boutonDroit.addEventListener("click", function(){
+    agrandissementImage6()
+  })
+  let boutonGauche = document.getElementById("bouton-gauche");
+  boutonGauche.addEventListener("click", function(){
+    agrandissementImage4()
+  })
 };
 function agrandissementImage6(){
   const imageModal = document.getElementById("image-modal");
   imageModal.setAttribute("src", cheminsDesImages[5]);
+  let boutonDroit = document.getElementById("bouton-droit");
+  boutonDroit.addEventListener("click", function(){
+    agrandissementImage7()
+  })
+  let boutonGauche = document.getElementById("bouton-gauche");
+  boutonGauche.addEventListener("click", function(){
+    agrandissementImage5()
+  })
 };
 function agrandissementImage7(){
   const imageModal = document.getElementById("image-modal");
   imageModal.setAttribute("src", cheminsDesImages[6]);
+  let boutonDroit = document.getElementById("bouton-droit");
+  boutonDroit.addEventListener("click", function(){
+    agrandissementImage8()
+  })
+  let boutonGauche = document.getElementById("bouton-gauche");
+  boutonGauche.addEventListener("click", function(){
+    agrandissementImage6()
+  })
 };
 function agrandissementImage8(){
   const imageModal = document.getElementById("image-modal");
   imageModal.setAttribute("src", cheminsDesImages[7]);
+  let boutonDroit = document.getElementById("bouton-droit");
+  boutonDroit.addEventListener("click", function(){
+    agrandissementImage9()
+  })
+  let boutonGauche = document.getElementById("bouton-gauche");
+  boutonGauche.addEventListener("click", function(){
+    agrandissementImage7()
+  })
 };
 function agrandissementImage9(){
   const imageModal = document.getElementById("image-modal");
   imageModal.setAttribute("src", cheminsDesImages[8]);
+  let boutonGauche = document.getElementById("bouton-gauche");
+  boutonGauche.addEventListener("click", function(){
+    agrandissementImage8()
+  })
 };
+
 ///////////////////////////////////////////////////////////////////////  Création des boutons /////////////////////////////////////////////////////////////////////
 // Récupérez l'élément parent des boutons
 const boutonsContainer = document.getElementById("container-filter");
