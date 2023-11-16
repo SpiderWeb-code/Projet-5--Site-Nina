@@ -55,20 +55,6 @@ for (let i = 0; i < cheminsDesImages.length; i++) {
   imagesContainer.appendChild(picture)
 }
 
-// Activation de la functon au clique sur une image, ouverture de la modale
-function openModal(){
-  console.log("Picture Cliqué");
-  modal.style.display = "block";
-  overlay.style.display = "block";
-  overlay.addEventListener("click", function(){
-    closeModal()
-  })
-}
-function closeModal(){
-  modal.style.display = "none";
-  overlay.style.display = "none";
-}
-
 //Rend les picture activable pour ouvrire la modal
 const allPictures = document.querySelectorAll(".all-pictures");
 allPictures.forEach(function(event){
@@ -199,6 +185,26 @@ boutonPortrait.addEventListener("click", function (){
     picture9.style.display="none";
 })
 };
+//Création des function qui servent a filtrer les images de la modal
+
+// Activation de la functon au clique sur une image, ouverture de la modale
+const imageModal = document.getElementById("image-modal");
+function openModal(){
+  console.log("Picture Cliqué");
+  modal.style.display = "block";
+  overlay.style.display = "block";
+  header.style.zIndex = "0";
+  //Appeler des functions qui dirons quel images mettre selon la ou l'on a cliqué
+  overlay.addEventListener("click", function(){
+    closeModal()
+  })
+};
+function closeModal(){
+  modal.style.display = "none";
+  overlay.style.display = "none";
+  header.style.zIndex = "10";
+};
+
 if(boutonTous.click){
   tous()
 }else{
@@ -256,5 +262,8 @@ var modal = document.createElement("div");
     modal.style.border = "1px solid #ccc";
     modal.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.1)";
     modal.style.zIndex = "2";
-    modal.innerHTML = `<p>Contenu de la modal</p><button onclick="closeModal()">Fermer</button>`;
+    modal.style.maxWidth = "498px";
+    modal.style.width = "100%";
+    modal.style.height = "653.33px";
+    modal.innerHTML = `<img id="image-modal></img>`;
     imagesContainer.appendChild(modal);
