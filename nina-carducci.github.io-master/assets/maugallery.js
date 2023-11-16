@@ -70,7 +70,9 @@ function tous(){
 //Ouverture et fermeture Modal
 function openModal(){
   console.log("Picture Cliqué");
-  modal.style.display = "block";
+  modal.style.display = "flex";
+  modal.style.justifyContent = "center";
+  modal.style.alignItems = "center";
   overlay.style.display = "block";
   header.style.zIndex = "0";
   //Ferme la modal
@@ -305,7 +307,7 @@ var modal = document.createElement("div");
     modal.style.maxWidth = "498px";
     modal.style.width = "100%";
     modal.style.height = "653.33px";
-    modal.innerHTML = `<img id="image-modal"></img>`;
+    modal.innerHTML = `<img id="image-modal" style="max-width: 542px; width: 100%; height: 100%; max-height: 637px;"></img>`;
     imagesContainer.appendChild(modal);
 
     //Appeler des functions qui dirons quel images mettre selon la ou l'on a cliqué
