@@ -1,5 +1,130 @@
-///////////////////////////////////////////////////////////////////////  Création des boutons /////////////////////////////////////////////////////////////////////
 
+/////////////////////////////////////////////////////////////////////////Création des functions ////////////////////////////////////////////////
+//Filtres Images
+function tous(){
+  boutonTous.addEventListener("click", function (){
+      picture1.style.display="initial";
+      picture2.style.display="initial";
+      picture3.style.display="initial";
+      picture4.style.display="initial";
+      picture5.style.display="initial";
+      picture6.style.display="initial";
+      picture7.style.display="initial";
+      picture8.style.display="initial";
+      picture9.style.display="initial";
+  })
+  };
+  function concert(){
+    boutonConcert.addEventListener("click", function (){
+        picture1.style.display="initial";
+        picture2.style.display="none";
+        picture3.style.display="none";
+        picture4.style.display="none";
+        picture5.style.display="none";
+        picture6.style.display="none";
+        picture7.style.display="none";
+        picture8.style.display="initial";
+        picture9.style.display="none";
+    })
+    };
+    function entreprise(){
+      boutonEntreprise.addEventListener("click", function (){
+          picture1.style.display="none";
+          picture2.style.display="initial";
+          picture3.style.display="initial";
+          picture4.style.display="none";
+          picture5.style.display="none";
+          picture6.style.display="none";
+          picture7.style.display="none";
+          picture8.style.display="none";
+          picture9.style.display="initial";
+      })
+      };
+      function mariage(){
+        boutonMariage.addEventListener("click", function (){
+            picture1.style.display="none";
+            picture2.style.display="none";
+            picture3.style.display="none";
+            picture4.style.display="initial";
+            picture5.style.display="none";
+            picture6.style.display="initial";
+            picture7.style.display="none";
+            picture8.style.display="none";
+            picture9.style.display="none";
+        })
+        };
+        function portrait(){
+          boutonPortrait.addEventListener("click", function (){
+              picture1.style.display="none";
+              picture2.style.display="none";
+              picture3.style.display="none";
+              picture4.style.display="none";
+              picture5.style.display="initial";
+              picture6.style.display="none";
+              picture7.style.display="initial";
+              picture8.style.display="none";
+              picture9.style.display="none";
+          })
+          };
+
+//Ouverture et fermeture Modal
+function openModal(){
+  console.log("Picture Cliqué");
+  modal.style.display = "block";
+  overlay.style.display = "block";
+  header.style.zIndex = "0";
+  //Ferme la modal
+  overlay.addEventListener("click", function(){
+    closeModal()
+  })
+};
+function closeModal(){
+  modal.style.display = "none";
+  overlay.style.display = "none";
+  header.style.zIndex = "10";
+};
+
+//Ajoute une photo différents dans la modal selon quel picture on a clqué
+function supprimeImage(){
+  document.getElementById("image-modal").remove
+};
+function agrandissementImage1(){
+  const imageModal = document.getElementById("image-modal");
+  imageModal.setAttribute("src", cheminsDesImages[0]);
+};
+function agrandissementImage2(){
+  const imageModal = document.getElementById("image-modal");
+  imageModal.setAttribute("src", cheminsDesImages[1]);
+};
+function agrandissementImage3(){
+  const imageModal = document.getElementById("image-modal");
+  imageModal.setAttribute("src", cheminsDesImages[2]);
+};
+function agrandissementImage4(){
+  const imageModal = document.getElementById("image-modal");
+  imageModal.setAttribute("src", cheminsDesImages[3]);
+};
+function agrandissementImage5(){
+  const imageModal = document.getElementById("image-modal");
+  imageModal.setAttribute("src", cheminsDesImages[4]);
+};
+function agrandissementImage6(){
+  const imageModal = document.getElementById("image-modal");
+  imageModal.setAttribute("src", cheminsDesImages[5]);
+};
+function agrandissementImage7(){
+  const imageModal = document.getElementById("image-modal");
+  imageModal.setAttribute("src", cheminsDesImages[6]);
+};
+function agrandissementImage8(){
+  const imageModal = document.getElementById("image-modal");
+  imageModal.setAttribute("src", cheminsDesImages[7]);
+};
+function agrandissementImage9(){
+  const imageModal = document.getElementById("image-modal");
+  imageModal.setAttribute("src", cheminsDesImages[8]);
+};
+///////////////////////////////////////////////////////////////////////  Création des boutons /////////////////////////////////////////////////////////////////////
 // Récupérez l'élément parent des boutons
 const boutonsContainer = document.getElementById("container-filter");
 
@@ -112,97 +237,13 @@ const source9 = document.getElementById("source-8");
 source9.setAttribute("srcset", cheminsImageMin[8]);
 //////////////////////////////////////////////////////////////// Filtres les Images //////////////////////////////////////////////////////////////////////////
 const boutonTous = document.getElementById("bouton-Tous");
-function tous(){
-boutonTous.addEventListener("click", function (){
-    picture1.style.display="initial";
-    picture2.style.display="initial";
-    picture3.style.display="initial";
-    picture4.style.display="initial";
-    picture5.style.display="initial";
-    picture6.style.display="initial";
-    picture7.style.display="initial";
-    picture8.style.display="initial";
-    picture9.style.display="initial";
-})
-};
-
 const boutonConcert = document.getElementById("bouton-Concert");
-function concert(){
-boutonConcert.addEventListener("click", function (){
-    picture1.style.display="initial";
-    picture2.style.display="none";
-    picture3.style.display="none";
-    picture4.style.display="none";
-    picture5.style.display="none";
-    picture6.style.display="none";
-    picture7.style.display="none";
-    picture8.style.display="initial";
-    picture9.style.display="none";
-})
-};
-
 const boutonEntreprise = document.getElementById("bouton-Entreprises");
-function entreprise(){
-boutonEntreprise.addEventListener("click", function (){
-    picture1.style.display="none";
-    picture2.style.display="initial";
-    picture3.style.display="initial";
-    picture4.style.display="none";
-    picture5.style.display="none";
-    picture6.style.display="none";
-    picture7.style.display="none";
-    picture8.style.display="none";
-    picture9.style.display="initial";
-})
-};
-
 const boutonMariage = document.getElementById("bouton-Mariages");
-function mariage(){
-boutonMariage.addEventListener("click", function (){
-    picture1.style.display="none";
-    picture2.style.display="none";
-    picture3.style.display="none";
-    picture4.style.display="initial";
-    picture5.style.display="none";
-    picture6.style.display="initial";
-    picture7.style.display="none";
-    picture8.style.display="none";
-    picture9.style.display="none";
-})
-};
-
 const boutonPortrait = document.getElementById("bouton-Portrait");
-function portrait(){
-boutonPortrait.addEventListener("click", function (){
-    picture1.style.display="none";
-    picture2.style.display="none";
-    picture3.style.display="none";
-    picture4.style.display="none";
-    picture5.style.display="initial";
-    picture6.style.display="none";
-    picture7.style.display="initial";
-    picture8.style.display="none";
-    picture9.style.display="none";
-})
-};
 
 // Activation de la functon au clique sur une image, ouverture de la modale
 const header = document.getElementById("id_top-header");
-function openModal(){
-  console.log("Picture Cliqué");
-  modal.style.display = "block";
-  overlay.style.display = "block";
-  header.style.zIndex = "0";
-  //Ferme la modal
-  overlay.addEventListener("click", function(){
-    closeModal()
-  })
-};
-function closeModal(){
-  modal.style.display = "none";
-  overlay.style.display = "none";
-  header.style.zIndex = "10";
-};
 
 if(boutonTous.click){
   tous()
@@ -266,47 +307,6 @@ var modal = document.createElement("div");
     modal.style.height = "653.33px";
     modal.innerHTML = `<img id="image-modal"></img>`;
     imagesContainer.appendChild(modal);
-
-    //Ajoute une photo différents dans la modal selon quel picture on a clqué
-    function supprimeImage(){
-      document.getElementById("image-modal").remove
-    };
-    function agrandissementImage1(){
-      const imageModal = document.getElementById("image-modal");
-      imageModal.setAttribute("src", cheminsDesImages[0]);
-    };
-    function agrandissementImage2(){
-      const imageModal = document.getElementById("image-modal");
-      imageModal.setAttribute("src", cheminsDesImages[1]);
-    };
-    function agrandissementImage3(){
-      const imageModal = document.getElementById("image-modal");
-      imageModal.setAttribute("src", cheminsDesImages[2]);
-    };
-    function agrandissementImage4(){
-      const imageModal = document.getElementById("image-modal");
-      imageModal.setAttribute("src", cheminsDesImages[3]);
-    };
-    function agrandissementImage5(){
-      const imageModal = document.getElementById("image-modal");
-      imageModal.setAttribute("src", cheminsDesImages[4]);
-    };
-    function agrandissementImage6(){
-      const imageModal = document.getElementById("image-modal");
-      imageModal.setAttribute("src", cheminsDesImages[5]);
-    };
-    function agrandissementImage7(){
-      const imageModal = document.getElementById("image-modal");
-      imageModal.setAttribute("src", cheminsDesImages[6]);
-    };
-    function agrandissementImage8(){
-      const imageModal = document.getElementById("image-modal");
-      imageModal.setAttribute("src", cheminsDesImages[7]);
-    };
-    function agrandissementImage9(){
-      const imageModal = document.getElementById("image-modal");
-      imageModal.setAttribute("src", cheminsDesImages[8]);
-    };
 
     //Appeler des functions qui dirons quel images mettre selon la ou l'on a cliqué
     picture1.addEventListener("click", function(){
