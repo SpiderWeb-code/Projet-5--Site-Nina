@@ -143,8 +143,10 @@ function supprimeImage(){
   document.getElementById("bouton-gauche").remove
   console.log("bouton supprimer active");
 };
-
+//CHEMAIN DES IMAGE ICI A L'ORIGINE
+const cheminsDesImagesZoomer = []
 const cheminsDesImages = ["./assets/image/image-concert/concert-image.webp", "./assets/image/image-entreprise/entreprise-image.webp", "./assets/image/image-entreprise/deuxiéme-image-entreprise.webp", "./assets/image/image-mariage/mariage-image.webp", "./assets/image/image-portraits/image-portraits.webp", "./assets/image/image-mariage/deuxieme-image-mariage.webp", "./assets/image/image-portraits/deuxieme-image-portraits.webp", "./assets/image/image-concert/deuxième-image-concert.webp", "./assets/image/image-entreprise/troisiéme-image-entreprise.webp",];
+const cheminsImageMin = ["./assets/image-min/image-concert.min/concert-image.webp", "./assets/image-min/image-entreprise.min/entreprise-image.webp", "./assets/image-min/image-entreprise.min/deuxiéme-image-entreprise.webp", "./assets/image-min/image-mariage.min/mariage-image.webp", "./assets/image-min/image-portraits.min/image-portraits.webp", "./assets/image-min/image-mariage.min/deuxieme-image-mariage.webp", "./assets/image-min/image-portraits.min/deuxieme-image-portraits.webp", "./assets/image-min/image-concert.min/deuxième-image-concert.webp", "./assets/image-min/image-entreprise.min/troisiéme-image-entreprise.webp"];
 // Index de l'image actuellement affichée
 let indexImageActuelle = 0;
 // Fonction pour afficher l'image dans la modal
@@ -211,9 +213,6 @@ couleursBoutons.forEach(bouton => {
 // Récupérez l'élément parent des images
 const imagesContainer = document.getElementById("gallery-image");
 
-// Tableau contenant les chemins des images
-//CHEMAIN DES IMAGE ICI A L'ORIGINE
-const cheminsImageMin = ["./assets/image-min/image-concert.min/concert-image.webp", "./assets/image-min/image-entreprise.min/entreprise-image.webp", "./assets/image-min/image-entreprise.min/deuxiéme-image-entreprise.webp", "./assets/image-min/image-mariage.min/mariage-image.webp", "./assets/image-min/image-portraits.min/image-portraits.webp", "./assets/image-min/image-mariage.min/deuxieme-image-mariage.webp", "./assets/image-min/image-portraits.min/deuxieme-image-portraits.webp", "./assets/image-min/image-concert.min/deuxième-image-concert.webp", "./assets/image-min/image-entreprise.min/troisiéme-image-entreprise.webp"];
 // Créez des images et ajoutez-les à la page en utilisant une boucle
 for (let i = 0; i < cheminsDesImages.length; i++) {
   const picture = document.createElement("picture");
