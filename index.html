@@ -16,7 +16,6 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap" rel="stylesheet">
-	<script src="./assets/bootstrap/bootstrap.bundle.min.js" defer></script>
 	<script src="./assets/maugallery.js" defer></script>
 	<script src="https://kit.fontawesome.com/bea713ca84.js" crossorigin="anonymous" defer></script>
 </head>
@@ -34,32 +33,47 @@
 	</div>
 </div>
 <div id="header">
-
-	<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+	<!-- ICI a l'origine -->
+	<!--<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
 		<div class="carousel-indicators">
 			<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
 			<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
 			<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
 		</div>
 		<div class="carousel-inner">
-			<div class="carousel-item active">
-				<img src="./assets/image/image_tableau-roulent/homme-entreprise.webp" class="d-block w-100" alt="photo d'un homme d'entreprise qui marche">
+			<div class="carousel-item active" id="container-button-slidbare">
+				<img src="./assets/image/image_tableau-roulent/homme-entreprise.webp" class="d-block w-100" alt="photo d'un homme d'entreprise qui marche" class="slide-image">
 			</div>
 			<div class="carousel-item">
-				<img src="./assets/image/image_tableau-roulent/supporters.webp" class="d-block w-100" alt="photo de supportaires passent un bon momment">
+				<img src="./assets/image/image_tableau-roulent/supporters.webp" class="d-block w-100" alt="photo de supportaires passent un bon momment" class="slide-image">
 			</div>
 			<div class="carousel-item">
-				<img src="./assets/image/image_tableau-roulent/les-mariée.webp" class="d-block w-100" alt="photo d'un mariage avec les mariées qui sembrassent">
+				<img src="./assets/image/image_tableau-roulent/les-mariée.webp" class="d-block w-100" alt="photo d'un mariage avec les mariées qui sembrassent" class="slide-image">
 			</div>
 		</div>
-		<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+		<button onclick="glisserGauche()" class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
 			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 			<span class="visually-hidden">Previous</span>
 		</button>
-		<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+		<button onclick="glisserGaucheDroit()" class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
 			<span class="carousel-control-next-icon" aria-hidden="true"></span>
 			<span class="visually-hidden">Next</span>
 		</button>
+	</div>-->
+	<div id="image-container">
+		<div class="slide-images">
+			<img class="slide-image" src="./assets/image/image_tableau-roulent/homme-entreprise.webp" alt="Image 1">
+			<img class="slide-image" src="./assets/image/image_tableau-roulent/supporters.webp" alt="Image 2">
+			<img class="slide-image" src="./assets/image/image_tableau-roulent/les-mariée.webp" alt="Image 3">
+		</div>
+		<div>
+			<button onclick="glisserGauche()" class="carousel-control-prev">
+				<span class="carousel-control-prev-icon"></span>
+			</button>
+			<button onclick="glisserDroite()" class="carousel-control-next">
+				<span class="carousel-control-next-icon"></span>
+			</button>
+			</div>
 	</div>
 </div>
 <div id="about">

@@ -1,4 +1,23 @@
+////////////////////////////////////////////////////////////////////// Création du glicement d'image ///////////////////////////////////////////
+let currentIndex = 0;
 
+    function glisserGauche() {
+        currentIndex = (currentIndex - 1 + 3) % 3;
+        effectuerGlissement(-150);
+    }
+
+    function glisserDroite() {
+        currentIndex = (currentIndex + 1) % 3;
+        effectuerGlissement(150);
+    }
+
+    function effectuerGlissement(offsetPercentage) {
+        let imagesContainer = document.querySelector(".slide-images");
+        imagesContainer.style.transform = `translateX(${offsetPercentage}%)`;
+        setTimeout(() => {
+            imagesContainer.style.transform = `translateX(${-currentIndex * 100}%)`;
+        }, 0);
+    }
 /////////////////////////////////////////////////////////////////////////Création des functions ////////////////////////////////////////////////
 //Filtres Images
 function tous(){
