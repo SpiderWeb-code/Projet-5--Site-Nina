@@ -135,27 +135,41 @@ function closeModal(){
   header.style.zIndex = "10";
 };
 
-//Ajoute une photo différents dans la modal selon quel picture on a clqué
+//Ajoute une photo différents dans la modal selon quel picture on a cliqué
+//Le probléme survient quand l'on clique plusieurs fois sur le bouton gauche 
+// Probléme trouvé !, activation multiplié des différentes function
+
+//Function qui supprime tout !
 function supprimeImage(){
+  document.getElementById("myModal").remove
   document.getElementById("image-modal").remove
+  document.getElementById("bouton-droit").remove
+  document.getElementById("bouton-gauche").remove
+  console.log("bouton supprimer active");
 };
 function agrandissementImage1(){
   const imageModal = document.getElementById("image-modal");
   imageModal.setAttribute("src", cheminsDesImages[0]);
-  let boutonDroit = document.getElementById("bouton-droit");
-  boutonDroit.addEventListener("click", function(){
-    agrandissementImage2()
+  if(boutonDroit.click){
+    let boutonDroit = document.getElementById("bouton-droit");
+    boutonDroit.addEventListener("click", function(){
+      supprimeImage()
+      agrandissementImage2()
+      console.log("Bouton Droit cliqué");
   })
 };
+}
 function agrandissementImage2(){
   const imageModal = document.getElementById("image-modal");
   imageModal.setAttribute("src", cheminsDesImages[1]);
   let boutonDroit = document.getElementById("bouton-droit");
   boutonDroit.addEventListener("click", function(){
+    supprimeImage()
     agrandissementImage3()
   })
   let boutonGauche = document.getElementById("bouton-gauche");
   boutonGauche.addEventListener("click", function(){
+    supprimeImage()
     agrandissementImage1()
   })
 };
@@ -164,10 +178,12 @@ function agrandissementImage3(){
   imageModal.setAttribute("src", cheminsDesImages[2]);
   let boutonDroit = document.getElementById("bouton-droit");
   boutonDroit.addEventListener("click", function(){
+    supprimeImage()
     agrandissementImage4()
   })
   let boutonGauche = document.getElementById("bouton-gauche");
   boutonGauche.addEventListener("click", function(){
+    supprimeImage()
     agrandissementImage2()
   })
 };
@@ -176,10 +192,12 @@ function agrandissementImage4(){
   imageModal.setAttribute("src", cheminsDesImages[3]);
   let boutonDroit = document.getElementById("bouton-droit");
   boutonDroit.addEventListener("click", function(){
+    supprimeImage()
     agrandissementImage5()
   })
   let boutonGauche = document.getElementById("bouton-gauche");
   boutonGauche.addEventListener("click", function(){
+    supprimeImage()
     agrandissementImage3()
   })
 };
@@ -188,10 +206,12 @@ function agrandissementImage5(){
   imageModal.setAttribute("src", cheminsDesImages[4]);
   let boutonDroit = document.getElementById("bouton-droit");
   boutonDroit.addEventListener("click", function(){
+    supprimeImage()
     agrandissementImage6()
   })
   let boutonGauche = document.getElementById("bouton-gauche");
   boutonGauche.addEventListener("click", function(){
+    supprimeImage()
     agrandissementImage4()
   })
 };
@@ -200,10 +220,12 @@ function agrandissementImage6(){
   imageModal.setAttribute("src", cheminsDesImages[5]);
   let boutonDroit = document.getElementById("bouton-droit");
   boutonDroit.addEventListener("click", function(){
+    supprimeImage()
     agrandissementImage7()
   })
   let boutonGauche = document.getElementById("bouton-gauche");
   boutonGauche.addEventListener("click", function(){
+    supprimeImage()
     agrandissementImage5()
   })
 };
@@ -212,10 +234,12 @@ function agrandissementImage7(){
   imageModal.setAttribute("src", cheminsDesImages[6]);
   let boutonDroit = document.getElementById("bouton-droit");
   boutonDroit.addEventListener("click", function(){
+    supprimeImage()
     agrandissementImage8()
   })
   let boutonGauche = document.getElementById("bouton-gauche");
   boutonGauche.addEventListener("click", function(){
+    supprimeImage()
     agrandissementImage6()
   })
 };
@@ -224,10 +248,12 @@ function agrandissementImage8(){
   imageModal.setAttribute("src", cheminsDesImages[7]);
   let boutonDroit = document.getElementById("bouton-droit");
   boutonDroit.addEventListener("click", function(){
+    supprimeImage()
     agrandissementImage9()
   })
   let boutonGauche = document.getElementById("bouton-gauche");
   boutonGauche.addEventListener("click", function(){
+    supprimeImage()
     agrandissementImage7()
   })
 };
@@ -236,6 +262,7 @@ function agrandissementImage9(){
   imageModal.setAttribute("src", cheminsDesImages[8]);
   let boutonGauche = document.getElementById("bouton-gauche");
   boutonGauche.addEventListener("click", function(){
+    supprimeImage()
     agrandissementImage8()
   })
 };
