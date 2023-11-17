@@ -144,11 +144,9 @@ function supprimeImage(){
   console.log("bouton supprimer active");
 };
 //CHEMAIN DES IMAGE ICI A L'ORIGINE
-const cheminsDesImagesZoomer = []
+const cheminsDesImagesMobil = ["./assets/image-mobil/image-concert/concert-image.webp", "./assets/image-mobil/image-entreprise/entreprise-image.webp", "./assets/image-mobil/image-entreprise/deuxiéme-image-entreprise.webp", "./assets/image-mobil/image-mariage/mariage-image.webp", "./assets/image-mobil/image-portraits/image-portraits.webp", "./assets/image-mobil/image-mariage/deuxieme-image-mariage.webp", "./assets/image-mobil/image-portraits/deuxieme-image-portraits.webp", "./assets/image-mobil/image-concert/deuxième-image-concert.webp", "./assets/image-mobil/image-entreprise/troisiéme-image-entreprise.webp"];
 const cheminsDesImages = ["./assets/image/image-concert/concert-image.webp", "./assets/image/image-entreprise/entreprise-image.webp", "./assets/image/image-entreprise/deuxiéme-image-entreprise.webp", "./assets/image/image-mariage/mariage-image.webp", "./assets/image/image-portraits/image-portraits.webp", "./assets/image/image-mariage/deuxieme-image-mariage.webp", "./assets/image/image-portraits/deuxieme-image-portraits.webp", "./assets/image/image-concert/deuxième-image-concert.webp", "./assets/image/image-entreprise/troisiéme-image-entreprise.webp",];
 const cheminsImageMin = ["./assets/image-min/image-concert.min/concert-image.webp", "./assets/image-min/image-entreprise.min/entreprise-image.webp", "./assets/image-min/image-entreprise.min/deuxiéme-image-entreprise.webp", "./assets/image-min/image-mariage.min/mariage-image.webp", "./assets/image-min/image-portraits.min/image-portraits.webp", "./assets/image-min/image-mariage.min/deuxieme-image-mariage.webp", "./assets/image-min/image-portraits.min/deuxieme-image-portraits.webp", "./assets/image-min/image-concert.min/deuxième-image-concert.webp", "./assets/image-min/image-entreprise.min/troisiéme-image-entreprise.webp"];
-// Index de l'image actuellement affichée
-let indexImageActuelle = 0;
 // Fonction pour afficher l'image dans la modal
 function afficherImage(index) {
   let imageModal = document.getElementById("image-modal");
@@ -217,15 +215,19 @@ const imagesContainer = document.getElementById("gallery-image");
 for (let i = 0; i < cheminsDesImages.length; i++) {
   const picture = document.createElement("picture");
   const source = document.createElement("source");
+  const sourceMobil = document.createElement("source");
   const image = document.createElement("img");
   image.src = cheminsDesImages[i]; // Utilisez le chemin de l'image
   // Créez un ID unique pour chaque image en utilisant la valeur de i
   image.id = `image-${i}`;
   image.className ="images_gallery";
   source.id = `source-${i}`;
+  sourceMobil.id = `source-mobil-${i}`
   source.setAttribute("media", "(max-width: 900px)");
+  sourceMobil.setAttribute("media", "(max-width: 425px)");
   picture.id = `picture-${i}`;
   picture.className = "all-pictures"
+  picture.appendChild(sourceMobil)
   picture.appendChild(source);
   picture.appendChild(image);
   imagesContainer.appendChild(picture)
@@ -268,6 +270,24 @@ const picture8 = document.getElementById("picture-7")
 const picture9 = document.getElementById("picture-8")
 
 //Les Sources
+const sourceMobil1 = document.getElementById("source-mobil-0");
+sourceMobil1.setAttribute("srcset", cheminsDesImagesMobil[0]);
+const sourceMobil2 = document.getElementById("source-mobil-1");
+sourceMobil2.setAttribute("srcset", cheminsDesImagesMobil[1]);
+const sourceMobil3 = document.getElementById("source-mobil-2");
+sourceMobil3.setAttribute("srcset", cheminsDesImagesMobil[2]);
+const sourceMobil4 = document.getElementById("source-mobil-3");
+sourceMobil4.setAttribute("srcset", cheminsDesImagesMobil[3]);
+const sourceMobil5 = document.getElementById("source-mobil-4");
+sourceMobil5.setAttribute("srcset", cheminsDesImagesMobil[4]);
+const sourceMobil6 = document.getElementById("source-mobil-5");
+sourceMobil6.setAttribute("srcset", cheminsDesImagesMobil[5]);
+const sourceMobil7 = document.getElementById("source-mobil-6");
+sourceMobil7.setAttribute("srcset", cheminsDesImagesMobil[6]);
+const sourceMobil8 = document.getElementById("source-mobil-7");
+sourceMobil8.setAttribute("srcset", cheminsDesImagesMobil[7]);
+const sourceMobil9 = document.getElementById("source-mobil-8");
+sourceMobil9.setAttribute("srcset", cheminsDesImagesMobil[8]);
 const source1 = document.getElementById("source-0");
 source1.setAttribute("srcset", cheminsImageMin[0]);
 const source2 = document.getElementById("source-1");
@@ -352,6 +372,7 @@ modal.appendChild(boutonGauche);
 picture1.addEventListener("click", function(){
   let imageModal = document.getElementById("image-modal");
   imageModal.setAttribute("src", cheminsDesImages[0])
+  //// Index de l'image actuellement affichée (Il nous aide pour dire ou l'on est positionnée et savoir quel image sont a droite et a gauche)
   indexImageActuelle = 0
 });
 picture2.addEventListener("click", function(){
