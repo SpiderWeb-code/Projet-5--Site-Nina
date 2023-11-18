@@ -11,7 +11,6 @@
 	<meta name="twitter:image" content="http://127.0.0.1:5500/nina-carducci.github.io-master/assets/image/image-Nina/nina.webp">
 	<meta name="twitter:url" content="http://127.0.0.1:5500/nina-carducci.github.io-master/index.html"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="./assets/bootstrap/bootstrap.css">
 	<link rel="stylesheet" href="./assets/style.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,7 +21,7 @@
 <body>
 <div class="top-header" id="id_top-header">
 	<h1 class="name">Nina Carducci</h1>
-	<div class="nav">   
+	<nav class="nav">   
 		<ul>
 			<li><a href="#about">À propos</a></li>
 			<li><a href="#gallery">Galerie</a></li>
@@ -30,7 +29,7 @@
 			<li><a href="#contact">Contact</a></li>
 			<li><a class="social-link" href="https://www.instagram.com/ninacarducci.photo/?hl=fr" target="_blank"><img src="assets/image/image-instagram/instagram.webp" style="width: 20px;" alt="instagram"></a></li>
 		</ul>
-	</div>
+	</nav>
 </div>
 <div id="header">
 	<!-- ICI a l'origine -->
@@ -76,7 +75,7 @@
 			</div>
 	</div>
 </div>
-<div id="about">
+<section id="about">
 	<div class="picture left">
 		<picture>
 			<source media="(max-width: 426px)" srcset="./assets/image-min/image-nina.min/nina.webp">
@@ -93,7 +92,7 @@
 		<span><strong>Mon numéro de téléphone : 05 56 67 78 89.</strong></span><br/>
 		<span><strong>Je réponds au téléphone du lundi au vendredi de 10 h à 19 h.</strong></span>
 	</div>
-</div>
+</section>
 <div id="gallery">
 	<h2 class="title">Portfolio</h2>
 	<div class="container py-3">
@@ -103,18 +102,19 @@
 		</div>
 	</div>
 	<div class="quote">
-		<figure>
-			<blockquote>
+		<figure class="container_text-richard">
+			<blockquote class="blockquote">
 				<h3 class="quote__text">Un portrait n’est pas une ressemblance. Dès lors qu’une émotion ou qu’un fait est traduit en photo, il cesse d’être un fait pour devenir une opinion. L’inexactitude n’existe pas en photographie. Toutes les photos sont exactes. Aucune d’elles n’est la vérité.</h3>
 			</blockquote>
 			<figcaption class="quote__author">- Richard Avedon</figcaption>
 		</figure>
 	</div>
 </div>
-<div id="services">
+<section id="services">
 	<h2 class="title">Mes services</h2>
-	<div class="container">
-		<div class="service">
+	<div id="container_container-articles">
+	<div class="container" id="container-articles">
+		<article class="service">
 			<div class="service__description">
 				<h3>Shooting photo</h3>
 				<p>Pour capturer vos moments les plus précieux et garder un souvenir impérissable. Je me déplace en Île-de-France pour réaliser vos photos</p>
@@ -124,8 +124,8 @@
 				<span>Matériel, déplacement inclus</span>
 			</div>
 
-		</div>
-		<div class="service">
+		</article>
+		<article class="service">
 			<div class="service__description">
 				<h3>Retouches</h3>
 				<p>Vous souhaitez retoucher vos photos pour un résultat professionnel ? Bénéficier d’un rendu optimal pour vos publications</p>
@@ -134,8 +134,8 @@
 				<h4>50€/photo</h4>
 				<span>2 AR par photo</span>
 			</div>
-		</div>
-		<div class="service">
+		</article>
+		<article class="service">
 			<div class="service__description">
 				<h3>Album photos</h3>
 				<p>Partagez avec vos proches et vos clients les photos des moments partagés ensemble à travers un album photo personnalisé</p>
@@ -144,18 +144,19 @@
 				<h4>400€ album A4</h4>
 				<span>30 pages recto/verso</span>
 			</div>
-		</div>
+		</article>
 	</div>
-</div>
+    </div>
+</section>
 <div class="quote">
-	<figure>
-		<blockquote>
+	<figure class="container_text-richard">
+		<blockquote class="blockquote">
 			<h3 class="quote__text">De manière inconsciente, je crois, je guette un regard, une expression, des traits ou une nostalgie capable de résumer ou plus exactement de révéler une vie</h3>
 		</blockquote>
 		<figcaption class="quote__author">- Richard Avedon</figcaption>
 	</figure>
 </div>
-<div id="contact">
+<section id="contact">
 	<div class="container">
 		<div class="form-container">
 			<h2>Une question ? Une demande de devis ?</h2>
@@ -174,8 +175,9 @@
 			<picture>
 				<source media="(max-width: 425px)" srcset="assets/image-mobil/image-apareil_photo/camera.webp">
 			<img src="./assets/image/image-apareil_photo/camera.webp" alt="apareil photo" style="max-width: 403px;">
+			</picture>
 		</div>
 	</div>
-</div>
+</section>
 </body>
 </html>
