@@ -9,7 +9,7 @@ body {max-width: 1920px;margin: auto;}
 #about {display: flex;background-color: #F6D2B8;padding-inline: 100px;padding-block: 100px;position: relative;}
 .picture.left::before {content: ' ';background-color: #E5975F;width: 374px;height: 329px;position: absolute;bottom: 0;left: 0;z-index: -1;}
 .picture {flex: 1;margin: 0 20px;z-index: 0;}
-.picture img {width: 100%;}
+.picture img {width: 100%; height: auto; max-width: 400px;}
 #about-me {flex: 2;}
 .about-me__title {margin-bottom: 60px; font-size: 30px; font-weight: 100;}
 .about-me__introduction {font-family: 'Spectral';font-weight: 800;font-style: italic;width: 60%; font-size: 16px;}
@@ -37,9 +37,7 @@ body {max-width: 1920px;margin: auto;}
   height: auto;
 }
 
-.slide-image img{
-  height: 100%;
-}
+
 
 .carousel-control-prev{
   position: absolute;
