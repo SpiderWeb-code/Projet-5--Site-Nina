@@ -33,8 +33,12 @@ body {max-width: 1920px;margin: auto;}
 
 .slide-image {
   flex: 0 0 100%;
-  max-width: 100%; /* Ajout de cette propriété pour rendre les images responsive */
+  width: 100%; /* Ajout de cette propriété pour rendre les images responsive */
   height: auto;
+}
+
+.slide-image img{
+  height: 100%;
 }
 
 .carousel-control-prev{

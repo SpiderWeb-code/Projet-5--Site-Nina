@@ -32,38 +32,22 @@
 	</nav>
 </div>
 <div id="header">
-	<!-- ICI a l'origine -->
-	<!--<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-		<div class="carousel-indicators">
-			<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-			<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-			<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-		</div>
-		<div class="carousel-inner">
-			<div class="carousel-item active" id="container-button-slidbare">
-				<img src="./assets/image/image_tableau-roulent/homme-entreprise.webp" class="d-block w-100" alt="photo d'un homme d'entreprise qui marche" class="slide-image">
-			</div>
-			<div class="carousel-item">
-				<img src="./assets/image/image_tableau-roulent/supporters.webp" class="d-block w-100" alt="photo de supportaires passent un bon momment" class="slide-image">
-			</div>
-			<div class="carousel-item">
-				<img src="./assets/image/image_tableau-roulent/les-mariée.webp" class="d-block w-100" alt="photo d'un mariage avec les mariées qui sembrassent" class="slide-image">
-			</div>
-		</div>
-		<button onclick="glisserGauche()" class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-			<span class="visually-hidden">Previous</span>
-		</button>
-		<button onclick="glisserGaucheDroit()" class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-			<span class="carousel-control-next-icon" aria-hidden="true"></span>
-			<span class="visually-hidden">Next</span>
-		</button>
-	</div>-->
 	<div id="image-container">
 		<div class="slide-images">
-			<img class="slide-image" src="./assets/image/image_tableau-roulent/homme-entreprise.webp" alt="Image 1">
+			<picture class="slide-image">
+				<source class="slide-image" media="(max-width: 769px)" srcset="./assets/image-min/image_tableau-roulent/homme-entreprise.webp">
+				<img class="slide-image" src="./assets/image/image_tableau-roulent/homme-entreprise.webp" alt="Image 1">
+			</picture>
+
+			<picture class="slide-image">
+			<source class="slide-image" media="(max-width: 769px)" srcset="./assets/image-min/image_tableau-roulent/supporters.webp">
 			<img class="slide-image" src="./assets/image/image_tableau-roulent/supporters.webp" alt="Image 2">
+			</picture>
+
+			<picture class="slide-image">
+			<source class="slide-image" media="(max-width: 769px)" srcset="./assets/image-min/image_tableau-roulent/les-mariée.webp">
 			<img class="slide-image" src="./assets/image/image_tableau-roulent/les-mariée.webp" alt="Image 3">
+			</picture>
 		</div>
 		<div>
 			<button onclick="glisserGauche()" class="carousel-control-prev">
@@ -72,8 +56,7 @@
 			<button onclick="glisserDroite()" class="carousel-control-next">
 				<span class="carousel-control-next-icon"><i class="fa-solid fa-chevron-right" style="color: #000000;"></i></span>
 			</button>
-			</div>
-	</div>
+		</div>
 </div>
 <section id="about">
 	<div class="picture left">
