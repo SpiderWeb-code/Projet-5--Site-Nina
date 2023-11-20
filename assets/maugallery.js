@@ -434,6 +434,40 @@ picture9.addEventListener("click", function(){
   imageModal.setAttribute("src", cheminsDesImages[8])
   indexImageActuelle = 8
 });
-
-
 imagesContainer.appendChild(modal);
+
+/////////////////////////////////////////////////////////////////////////////////////////////// LE TRAVAIL EST ICI 
+    let imageModal1 = document.getElementById("image-modal")
+    let image0 = document.getElementById('image-0');
+    let image7 = document.getElementById("image-7");
+// Ajoutez des écouteurs d'événements pour le clic sur le bouton et l'image
+image0.addEventListener('click', function() {
+    if (image0.classList.contains('CLIQUER') && image7.classList.contains(`CLIQUER`)) {
+        //Condition qui dit que SI je clique sur le bouton droit, alors sa ouvre l'image 7 ou que sa clique un certain nombre de fois MAIS SEULEMENT si j'ai la classe CLIQUER
+        if(imageModal1.className.includes('CLIQUER')){
+          let boutonDroit = document.getElementById("bouton-precedent");
+          let boutonGauche = document.getElementById("bouton-suivant");
+          boutonDroit.addEventListener("click", function(){
+            //Nombres de clique sur le bouton droit
+            for(let i=0; i<6; i++){
+              boutonDroit.click();
+            }
+          })
+          boutonGauche.addEventListener("click", function(){
+            //Nombres de clique sur le bouton gauche
+            for(let i=0; i<6; i++){
+              boutonGauche.click();
+            }
+          })
+        }
+        alert("mise ne place du style")
+        }
+      });
+///////////////////////////////////////////////////////////////////////////////////////////////// LE TRAVAIL CE FINIT LA 
+boutonConcert.addEventListener('click', function() {
+    // Ajoutez une classe pour indiquer que l'image-0 a été cliquée
+    image0.classList.add('CLIQUER');
+    image7.classList.add(`CLIQUER`);
+    imageModal1.classList.add("CLIQUER")
+    alert("bouton concert CLIQUER")
+});
