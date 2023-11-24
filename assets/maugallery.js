@@ -578,7 +578,129 @@ function filtreModalConcert(){
             alert("bouton concert CLIQUER")
             });
     }
+/////////////////////////////////////////////////////////////////////// Fait le clique automatique sur le bouton de la barre déroulente ///////////////////////////
+// Sélectionnez le bouton auto-next
+const autoNextButton = document.getElementById('auto-next');
 
+// Fonction pour déclencher un clic sur le bouton toutes les 3 secondes
+function autoClick() {
+  autoNextButton.click();
+}
+
+// Démarrez l'intervalle au chargement de la page
+setInterval(autoClick, 7000);
+//////////////////////////////////////////////////////////////// CHANGE LA COULEUR DE L'UN DES 3 BOUTONS DESLON L'IMAGE AFFICHER DANS LE TABLEAU DEROULENT ////////////////
+
+// Initialiser le compteur de clics
+let compteurDeClics = 1; // Définir le compteur à 1 au lancement de la page
+
+// Fonction pour changer la couleur des boutons
+function changerCouleurBoutons() {
+  if (compteurDeClics === 1) {
+    document.getElementById('bouton-barre-1').style.backgroundColor = 'white';
+    document.getElementById('bouton-barre-2').style.backgroundColor = 'gray';
+    document.getElementById('bouton-barre-3').style.backgroundColor = 'gray';
+  } else if (compteurDeClics === 2) {
+    document.getElementById('bouton-barre-1').style.backgroundColor = 'gray';
+    document.getElementById('bouton-barre-2').style.backgroundColor = 'white';
+    document.getElementById('bouton-barre-3').style.backgroundColor = 'gray';
+  } else if (compteurDeClics === 3) {
+    document.getElementById('bouton-barre-1').style.backgroundColor = 'gray';
+    document.getElementById('bouton-barre-2').style.backgroundColor = 'gray';
+    document.getElementById('bouton-barre-3').style.backgroundColor = 'white';
+    // Réinitialiser le compteur après le troisième clic
+    compteurDeClics = 0;
+    console.log(compteurDeClics)
+  }
+}
+
+// Appeler la fonction pour changer la couleur des boutons au chargement de la page
+changerCouleurBoutons();
+
+// Attacher un écouteur d'événements au bouton droit
+document.querySelector('.carousel-control-next').addEventListener('click', function() {
+  // Incrémenter le compteur de clics à chaque clic sur le bouton droit
+  compteurDeClics++;
+  changerCouleurBoutons();
+});
+// Attacher un écouteur d'événements au bouton gauche
+document.querySelector('.carousel-control-prev').addEventListener('click', function() {
+  // Décrémenter le compteur de clics à chaque clic sur le bouton gauche
+  compteurDeClics--;
+
+  // Assurez-vous que le compteur ne devienne pas négatif
+  if (compteurDeClics === 0) {
+    document.getElementById('bouton-barre-1').style.backgroundColor = 'gray';
+    document.getElementById('bouton-barre-2').style.backgroundColor = 'gray';
+    document.getElementById('bouton-barre-3').style.backgroundColor = 'white';
+  } else if (compteurDeClics === -1) {
+    document.getElementById('bouton-barre-1').style.backgroundColor = 'gray';
+    document.getElementById('bouton-barre-2').style.backgroundColor = 'white';
+    document.getElementById('bouton-barre-3').style.backgroundColor = 'gray';
+  } else if (compteurDeClics === -2) {
+    document.getElementById('bouton-barre-1').style.backgroundColor = 'white';
+    document.getElementById('bouton-barre-2').style.backgroundColor = 'gray';
+    document.getElementById('bouton-barre-3').style.backgroundColor = 'gray';
+    // Réinitialiser le compteur après le troisième clic
+    console.log(compteurDeClics)
+    compteurDeClics = 1
+  }
+
+  changerCouleurBoutons();
+});
+////////// ICI CA FAIT LE CHANGEMENT DE COULEUR DES BOUTONS AU CLIQUE SUR LE BOUTON RETOUR
+///////////////////////////////////////////////////////////////////////// 3 BOUTONS CLIQUER ///////////////////////////////////////////////////////////////////////
+let boutonBarre1 = document.getElementById("bouton-barre-1");
+let boutonBarre2 = document.getElementById("bouton-barre-2");
+let boutonBarre3 = document.getElementById("bouton-barre-3");
+boutonBarre1.addEventListener("click", barre1())
+function barre1(){
+boutonBarre1.addEventListener("click", function(){
+  boutonBarre1.style.backgroundColor = "white"
+  if(boutonBarre1.style.backgroundColor = "white"){
+    autoClick()
+    boutonBarre1.focus()
+    boutonBarre2.style.backgroundColor = "gray";
+    boutonBarre3.style.backgroundColor = "gray";
+    console.log("1")
+  }
+})
+boutonBarre2.addEventListener("click", function(){
+  boutonBarre2.style.backgroundColor = "white"
+  if(boutonBarre2.style.backgroundColor = "white"){
+    boutonBarre1.focus()
+    boutonBarre1.style.backgroundColor = "gray";
+    boutonBarre3.style.backgroundColor = "gray";
+    autoClick()
+    console.log("2")
+  }
+})
+boutonBarre3.addEventListener("click", function(){
+  boutonBarre3.style.backgroundColor = "white"
+  boutonBarre1.focus()
+  if(boutonBarre3.style.background = "white"){
+    boutonBarre1.focus()
+    boutonBarre1.style.backgroundColor = "gray";
+    boutonBarre2.style.backgroundColor = "gray";
+    autoClick()
+    autoClick()
+    console.log("3")
+  }
+})
+}
+function autoClick() {
+  const autoNextButton = document.getElementById('auto-next');
+  
+  // Créer un événement de clic
+  const clickEvent = new MouseEvent('click', {
+    bubbles: true,
+    cancelable: true,
+    view: window
+  });
+
+  // Déclencher l'événement de clic sur le bouton auto-next
+  autoNextButton.dispatchEvent(clickEvent);
+}
 ///////////////////////////////////////////////////////////////////////  Création des boutons /////////////////////////////////////////////////////////////////////
 // Récupérez l'élément parent des boutons
 const boutonsContainer = document.getElementById("container-filter");
@@ -592,7 +714,7 @@ for (let i = 0; i < nomsDesBoutons.length; i++) {
   bouton.textContent = nomsDesBoutons[i]; // Utilisez le nom du bouton comme texte
   
   // Créez un ID unique en combinant le nom du bouton et la valeur de i
-  bouton.id = `bouton-${nomsDesBoutons[i]}`;
+  bouton.id = `bouton-${nomsDesBoutons[i]}`; 
   bouton.className = "ensemble-boutons"
   
   boutonsContainer.appendChild(bouton);

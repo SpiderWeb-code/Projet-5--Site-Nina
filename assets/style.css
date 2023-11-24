@@ -19,6 +19,32 @@ body {max-width: 1920px;margin: auto;}
 .gallery .nav {justify-content: center;}
 .nav-pills .nav-link.active-tag{background-color: #000000;color: white;}
 .nav-pills .nav-link {color: #000000;cursor: pointer;}
+/* Bouton Barre */
+#container_boutons-barre{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  bottom: 15px;
+  width: 100%;
+}
+.boutons-barres{
+  width: 30px;
+  height: 3px;
+  border: none;
+}
+#bouton-barre-1{
+  background-color: white;
+}
+#bouton-barre-2{
+  background-color: gray;
+}
+#bouton-barre-2{
+  background-color: gray;
+}
+#bouton-barre-3{
+  background-color: gray;
+}
 /*Mise en place de la SlideBare*/
 #image-container {
   position: relative;
@@ -36,8 +62,6 @@ body {max-width: 1920px;margin: auto;}
   width: 100%; /* Ajout de cette propriété pour rendre les images responsive */
   height: auto;
 }
-
-
 
 .carousel-control-prev{
   position: absolute;
