@@ -19,6 +19,16 @@ let currentIndex = 0;
         }, 0);
     }
 /////////////////////////////////////////////////////////////////////////Création des functions ////////////////////////////////////////////////
+// Reinitialisation Couleurs Boutons
+function couleurBlancheTous(){
+  let lesBoutonsCouleur = [boutonTous, boutonConcert, boutonEntreprise, boutonMariage, boutonPortrait]
+  for(let i=0; i<5; i++){
+  lesBoutonsCouleur[i].style.backgroundColor = "white";
+  lesBoutonsCouleur[i].style.borderColor = "white";
+  lesBoutonsCouleur[i].style.color = "black";
+  console.log(lesBoutonsCouleur)
+  }
+}
 //Filtres Images
 function tous(){
   boutonTous.addEventListener("click", function (){
@@ -31,10 +41,12 @@ function tous(){
       picture7.style.display="initial";
       picture8.style.display="initial";
       picture9.style.display="initial";
+      location.reload();
   })
   };
   function concert(){
     boutonConcert.addEventListener("click", function (){
+      couleurBlancheTous()
         picture1.style.display="initial";
         picture2.style.display="none";
         picture3.style.display="none";
@@ -44,13 +56,14 @@ function tous(){
         picture7.style.display="none";
         picture8.style.display="initial";
         picture9.style.display="none";
-        boutonTous.style.backgroundColor="white";
-        boutonTous.style.color="black";
-        boutonTous.style.borderColor="white";
+        boutonConcert.style.backgroundColor="#BEB45A";
+        boutonConcert.style.color="white";
+        boutonConcert.style.borderColor="#BEB45A";
     })
     };
     function entreprise(){
       boutonEntreprise.addEventListener("click", function (){
+        couleurBlancheTous()
           picture1.style.display="none";
           picture2.style.display="initial";
           picture3.style.display="initial";
@@ -60,13 +73,14 @@ function tous(){
           picture7.style.display="none";
           picture8.style.display="none";
           picture9.style.display="initial";
-          boutonTous.style.backgroundColor="white";
-          boutonTous.style.color="black";
-          boutonTous.style.borderColor="white";
+          boutonEntreprise.style.backgroundColor="#BEB45A";
+          boutonEntreprise.style.color="white";
+          boutonEntreprise.style.borderColor="#BEB45A";
       })
       };
       function mariage(){
         boutonMariage.addEventListener("click", function (){
+          couleurBlancheTous()
             picture1.style.display="none";
             picture2.style.display="none";
             picture3.style.display="none";
@@ -76,13 +90,14 @@ function tous(){
             picture7.style.display="none";
             picture8.style.display="none";
             picture9.style.display="none";
-            boutonTous.style.backgroundColor="white";
-            boutonTous.style.color="black";
-            boutonTous.style.borderColor="white";
+            boutonMariage.style.backgroundColor="#BEB45A";
+            boutonMariage.style.color="white";
+            boutonMariage.style.borderColor="#BEB45A";
         })
         };
         function portrait(){
           boutonPortrait.addEventListener("click", function (){
+            couleurBlancheTous()
               picture1.style.display="none";
               picture2.style.display="none";
               picture3.style.display="none";
@@ -92,9 +107,9 @@ function tous(){
               picture7.style.display="initial";
               picture8.style.display="none";
               picture9.style.display="none";
-              boutonTous.style.backgroundColor="white";
-              boutonTous.style.color="black";
-              boutonTous.style.borderColor="white";
+              boutonPortrait.style.backgroundColor="#BEB45A";
+              boutonPortrait.style.color="white";
+              boutonPortrait.style.borderColor="#BEB45A";
           })
           };
 
@@ -618,13 +633,13 @@ function changerCouleurBoutons() {
 changerCouleurBoutons();
 
 // Attacher un écouteur d'événements au bouton droit
-document.querySelector('.carousel-control-next').addEventListener('click', function() {
+document.querySelector('.next').addEventListener('click', function() {
   // Incrémenter le compteur de clics à chaque clic sur le bouton droit
   compteurDeClics++;
   changerCouleurBoutons();
 });
 // Attacher un écouteur d'événements au bouton gauche
-document.querySelector('.carousel-control-prev').addEventListener('click', function() {
+document.querySelector('.prev').addEventListener('click', function() {
   // Décrémenter le compteur de clics à chaque clic sur le bouton gauche
   compteurDeClics--;
 
@@ -833,6 +848,9 @@ const source9 = document.getElementById("source-8");
 source9.setAttribute("srcset", cheminsImageMin[8]);
 //////////////////////////////////////////////////////////////// Filtres les Images //////////////////////////////////////////////////////////////////////////
 const boutonTous = document.getElementById("bouton-Tous");
+boutonTous.style.backgroundColor="#BEB45A";
+boutonTous.style.color="white";
+boutonTous.style.borderColor="#BEB45A";
 const boutonConcert = document.getElementById("bouton-Concert");
 const boutonEntreprise = document.getElementById("bouton-Entreprises");
 const boutonMariage = document.getElementById("bouton-Mariages");
@@ -947,34 +965,3 @@ imagesContainer.appendChild(modal);
   boutonMariage.addEventListener("click", filtreModalMariage());
   boutonPortrait.addEventListener("click", filtreModalPortrait());
   ///////////////////////////////////////////////////////////////////////////////////////////// SA COMMENCE ICI
-  // Fonction pour définir un cookie
-  function setCookie(name, value, days) {
-    const expires = new Date();
-    expires.setTime(expires.getTime() + days * 24 * 60 * 60 * 1000);
-    document.cookie = `${name}=${value};expires=${expires.toUTCString()};path=/`;
-}
-
-// Fonction pour obtenir la valeur d'un cookie
-function getCookie(name) {
-    const keyValue = document.cookie.match(`(^|;) ?${name}=([^;]*)(;|$)`);
-    return keyValue ? keyValue[2] : null;
-}
-
-// Ajoute un écouteur d'événements pour le chargement de la fenêtre
-window.addEventListener('load', function() {
-    // Vérifie si le cookie 'pageRefreshed' existe
-    if (getCookie('pageRefreshed')) {
-        // Change le style du bouton si la page a été actualisée
-        const boutonTous = document.getElementById('bouton-Tous');
-        boutonTous.style.backgroundColor = 'black';
-        boutonTous.style.color = 'white';
-        boutonTous.style.borderColor="black";
-    }
-});
-
-// Ajoute un écouteur d'événements pour le clic sur le bouton "Tous"
-document.getElementById('bouton-Tous').addEventListener('click', function() {
-    // Réinitialise le cookie avec une valeur, actualise la page, et définit le cookie
-    setCookie('pageRefreshed', 'true', 1);
-    location.reload();
-});

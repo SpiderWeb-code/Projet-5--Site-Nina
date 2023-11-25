@@ -63,7 +63,7 @@ body {max-width: 1920px;margin: auto;}
   height: auto;
 }
 
-.carousel-control-prev{
+.prev{
   position: absolute;
   top: 0;
   bottom: 0;
@@ -91,7 +91,7 @@ body {max-width: 1920px;margin: auto;}
   justify-content: center;
   align-items: center;
 }
-.carousel-control-next{
+.next{
   position: absolute;
   top: 0;
   bottom: 0;
@@ -148,8 +148,8 @@ body {max-width: 1920px;margin: auto;}
 #contact {margin: auto;background-color: #D8D3A8 ;position: relative;padding-inline: 100px;padding-block: 100px;}
 #contact .container {display: flex;}
 .picture.right::before {content: ' ';background-color: #BEB45A;width: 374px;height: 329px;position: absolute;bottom: 0;right: 0;z-index: -1;}
-.form-container {flex : 2;}.carousel-control-next span{background-color: grey;height: 37px;width: 37px;border: 5px solid grey;border-radius: 5px;}
-.carousel-control-prev span{background-color: gray;height: 37px;width: 37px;border: 5px solid grey;border-radius: 5px;}
+.form-container {flex : 2;}.next span{background-color: grey;height: 37px;width: 37px;border: 5px solid grey;border-radius: 5px;}
+.prev span{background-color: gray;height: 37px;width: 37px;border: 5px solid grey;border-radius: 5px;}
 .modal-body{display: flex;justify-content: center;}
 form {display: flex;flex-direction: column;width: 70%;align-items: flex-start;}
 form input {width: 100%;background-color: transparent;border: solid 1px;height: 2.5em;margin-bottom: 20px;}
