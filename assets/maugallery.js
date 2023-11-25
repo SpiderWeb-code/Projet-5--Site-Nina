@@ -26,6 +26,7 @@ function couleurBlancheTous(){
   lesBoutonsCouleur[i].style.backgroundColor = "white";
   lesBoutonsCouleur[i].style.borderColor = "white";
   lesBoutonsCouleur[i].style.color = "black";
+  lesBoutonsCouleur[i].style.fontWeight = "100";
   console.log(lesBoutonsCouleur)
   }
 }
@@ -57,8 +58,9 @@ function tous(){
         picture8.style.display="initial";
         picture9.style.display="none";
         boutonConcert.style.backgroundColor="#BEB45A";
-        boutonConcert.style.color="white";
+        boutonConcert.style.color="black";
         boutonConcert.style.borderColor="#BEB45A";
+        boutonConcert.style.fontWeight = "700";
     })
     };
     function entreprise(){
@@ -74,8 +76,9 @@ function tous(){
           picture8.style.display="none";
           picture9.style.display="initial";
           boutonEntreprise.style.backgroundColor="#BEB45A";
-          boutonEntreprise.style.color="white";
+          boutonEntreprise.style.color="black";
           boutonEntreprise.style.borderColor="#BEB45A";
+          boutonEntreprise.style.fontWeight = "700";
       })
       };
       function mariage(){
@@ -91,8 +94,9 @@ function tous(){
             picture8.style.display="none";
             picture9.style.display="none";
             boutonMariage.style.backgroundColor="#BEB45A";
-            boutonMariage.style.color="white";
+            boutonMariage.style.color="black";
             boutonMariage.style.borderColor="#BEB45A";
+            boutonMariage.style.fontWeight = "700";
         })
         };
         function portrait(){
@@ -108,8 +112,9 @@ function tous(){
               picture8.style.display="none";
               picture9.style.display="none";
               boutonPortrait.style.backgroundColor="#BEB45A";
-              boutonPortrait.style.color="white";
+              boutonPortrait.style.color="black";
               boutonPortrait.style.borderColor="#BEB45A";
+              boutonPortrait.style.fontWeight = "700";
           })
           };
 
@@ -849,7 +854,8 @@ source9.setAttribute("srcset", cheminsImageMin[8]);
 //////////////////////////////////////////////////////////////// Filtres les Images //////////////////////////////////////////////////////////////////////////
 const boutonTous = document.getElementById("bouton-Tous");
 boutonTous.style.backgroundColor="#BEB45A";
-boutonTous.style.color="white";
+boutonTous.style.color="black";
+boutonTous.style.fontWeight = "700";
 boutonTous.style.borderColor="#BEB45A";
 const boutonConcert = document.getElementById("bouton-Concert");
 const boutonEntreprise = document.getElementById("bouton-Entreprises");
