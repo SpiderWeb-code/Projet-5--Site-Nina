@@ -678,17 +678,15 @@ function barre1(){
 boutonBarre1.addEventListener("click", function(){
   boutonBarre1.style.backgroundColor = "white"
   if(boutonBarre1.style.backgroundColor = "white"){
-    autoClick()
-    boutonBarre1.focus()
     boutonBarre2.style.backgroundColor = "gray";
     boutonBarre3.style.backgroundColor = "gray";
+    autoClick()
     console.log("1")
   }
 })
 boutonBarre2.addEventListener("click", function(){
   boutonBarre2.style.backgroundColor = "white"
   if(boutonBarre2.style.backgroundColor = "white"){
-    boutonBarre1.focus()
     boutonBarre1.style.backgroundColor = "gray";
     boutonBarre3.style.backgroundColor = "gray";
     autoClick()
@@ -697,12 +695,9 @@ boutonBarre2.addEventListener("click", function(){
 })
 boutonBarre3.addEventListener("click", function(){
   boutonBarre3.style.backgroundColor = "white"
-  boutonBarre1.focus()
   if(boutonBarre3.style.background = "white"){
-    boutonBarre1.focus()
     boutonBarre1.style.backgroundColor = "gray";
     boutonBarre2.style.backgroundColor = "gray";
-    autoClick()
     autoClick()
     console.log("3")
   }
