@@ -608,7 +608,7 @@ function autoClick() {
 }
 
 // Démarrez l'intervalle au chargement de la page
-setInterval(autoClick, 7000);
+setInterval(autoClick, 8000);
 //////////////////////////////////////////////////////////////// CHANGE LA COULEUR DE L'UN DES 3 BOUTONS DESLON L'IMAGE AFFICHER DANS LE TABLEAU DEROULENT ////////////////
 
 // Initialiser le compteur de clics
