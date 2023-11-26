@@ -234,8 +234,8 @@ function filtreModalPortrait(){
   let compteurDeClique = 0
   console.log(imageModal)
   // Ajoutez des écouteurs d'événements pour le clic sur le bouton et l'image
-  image6.addEventListener('click', function() {
-  if (image6.classList.contains('CLIQUER') && image4.classList.contains(`CLIQUER`)) {
+  image4.addEventListener('click', function() {
+  if (image4.classList.contains('CLIQUER') && image6.classList.contains(`CLIQUER`)) {
       //Condition qui dit que SI je clique sur le bouton droit, alors sa ouvre l'image 7 ou que sa clique un certain nombre de fois MAIS SEULEMENT si j'ai la classe CLIQUER
       if(imageModal.className.includes('CLIQUER')){
         let boutonDroit = document.getElementById("bouton-precedent");
@@ -247,6 +247,14 @@ function filtreModalPortrait(){
             imageModal.setAttribute("src", cheminsDesImages[6])
             console.log(compteurDeClique)
           }
+          //AJOUTER UNE CONDITION AU CLIQUE DES BOUTONS GAUCHE EST DROIT
+          boutonDroit.addEventListener("click", function(){
+            if(compteurDeClique = 1){
+              imageModal.setAttribute("src", cheminsDesImages[6])
+              console.log(compteurDeClique)
+            }
+          })
+          ////////////////////////////////////////////////////////////////
         })
         boutonGauche.addEventListener("click", function(){
           alert("Bouton Gauche Cliquer")
@@ -255,20 +263,28 @@ function filtreModalPortrait(){
             imageModal.setAttribute("src", cheminsDesImages[4])
             console.log(compteurDeClique)
           }
+          // AJOUTER UNE CONDITION AU CLIQUE DES BOUTONS GAUCHE EST DROIT
+          boutonGauche.addEventListener("click", function(){
+            if(compteurDeClique = 1){
+              imageModal.setAttribute("src", cheminsDesImages[4])
+              console.log(compteurDeClique)
+            }
+          })
+          //////////
         })
       }
       alert("mise ne place du style")
       }
     });
-    boutonConcert.addEventListener('click', function() {
+    boutonPortrait.addEventListener('click', function() {
       // Ajoutez une classe pour indiquer que l'image-0 a été cliquée
-      image6.classList.add('CLIQUER');
-      image4.classList.add(`CLIQUER`);
+      image4.classList.add('CLIQUER');
+      image6.classList.add(`CLIQUER`);
       imageModal.classList.add("CLIQUER")
       alert("bouton concert CLIQUER")
       });
-      image4.addEventListener('click', function() {
-        if (image4.classList.contains('CLIQUER') && image6.classList.contains(`CLIQUER`)) {
+      image6.addEventListener('click', function() {
+        if (image6.classList.contains('CLIQUER') && image4.classList.contains(`CLIQUER`)) {
             //Condition qui dit que SI je clique sur le bouton droit, alors sa ouvre l'image 7 ou que sa clique un certain nombre de fois MAIS SEULEMENT si j'ai la classe CLIQUER
             if(imageModal.className.includes('CLIQUER')){
               let boutonDroit = document.getElementById("bouton-precedent");
@@ -280,6 +296,12 @@ function filtreModalPortrait(){
                   imageModal.setAttribute("src", cheminsDesImages[6])
                   console.log(compteurDeClique)
                 }
+                //AJOUT 
+                if(compteurDeClique = 1){
+                  imageModal.setAttribute("src", cheminsDesImages[6])
+                  console.log(compteurDeClique)
+                }
+                ///////
               })
               boutonGauche.addEventListener("click", function(){
                 alert("Bouton Gauche Cliquer")
@@ -288,6 +310,12 @@ function filtreModalPortrait(){
                   imageModal.setAttribute("src", cheminsDesImages[4])
                   console.log(compteurDeClique)
                 }
+                //AJOUT
+                if(compteurDeClique = 1){
+                  imageModal.setAttribute("src", cheminsDesImages[4])
+                  console.log(compteurDeClique)
+                }
+                ///////
               })
             }
             alert("mise ne place du style")
