@@ -33,6 +33,9 @@ body {max-width: 1920px;margin: auto;}
   height: 3px;
   border: none;
 }
+.boutons-barres p{
+  visibility: hidden;
+}
 #bouton-barre-1{
   background-color: white;
 }
