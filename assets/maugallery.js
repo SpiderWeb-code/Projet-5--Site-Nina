@@ -681,7 +681,7 @@ function filtreModalEntreprise(){
               boutonDroit.addEventListener("click", function(){
                 //Nombres de clique sur le bouton droit
                 if(compteurDeClique = 1){
-                  imageModal.setAttribute("src", cheminsDesImages[2])
+                  imageModal.setAttribute("src", cheminsDesImages[8])
                   console.log(compteurDeClique)
                 }
                 boutonDroit.addEventListener("click", function(){
