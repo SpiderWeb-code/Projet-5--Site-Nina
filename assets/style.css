@@ -34,7 +34,7 @@ body {max-width: 1920px;margin: auto;}
   border: none;
 }
 .boutons-barres p{
-  visibility: hidden;
+  display: none;
 }
 #bouton-barre-1{
   background-color: white;
