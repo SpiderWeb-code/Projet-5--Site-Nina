@@ -1132,7 +1132,7 @@ element7.setAttribute("alt", "photo de portrait, photographie de personnes, phot
 const element8 = document.getElementById("image-7");
 element8.setAttribute("alt", "photographie d'un concert, photographe pour célébrités, photo spéctacle")
 const element9 = document.getElementById("image-8");
-element9.setAttribute("alt", "photographe pour millieu professionnel, photographie pour personnels d'entreprise, photo pour personnels d'entreprise");
+element9.setAttribute("alt", "photographe pour millieu professionnel, photographie pour personnels d'entreprise");
 // Sélectionne les balises <picture> en fonction de leurs ID
 const picture1 = document.getElementById("picture-0")
 const picture2 = document.getElementById("picture-1")
