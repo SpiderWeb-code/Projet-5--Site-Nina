@@ -304,13 +304,13 @@ function filtreModalPortrait(){
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// FILTRE MODAL MARIAGE
 function filtreModalMariage(){
   let imageModal = document.getElementById("image-modal");
-  let image5 = document.getElementById('image-5');
-  let image3 = document.getElementById("image-3");
+  let image3 = document.getElementById('image-3');
+  let image5 = document.getElementById("image-5");
   let compteurDeClique = 0
   console.log(imageModal)
   // Ajoutez des écouteurs d'événements pour le clic sur le bouton et l'image
-  image5.addEventListener('click', function() {
-  if (image5.classList.contains('CLIQUER') && image3.classList.contains(`CLIQUER`)) {
+  image3.addEventListener('click', function() {
+  if (image3.classList.contains('CLIQUER') && image5.classList.contains(`CLIQUER`)) {
       //Condition qui dit que SI je clique sur le bouton droit, alors sa ouvre l'image 7 ou que sa clique un certain nombre de fois MAIS SEULEMENT si j'ai la classe CLIQUER
       if(imageModal.className.includes('CLIQUER')){
         let boutonDroit = document.getElementById("bouton-precedent");
@@ -322,6 +322,14 @@ function filtreModalMariage(){
             imageModal.setAttribute("src", cheminsDesImages[5])
             console.log(compteurDeClique)
           }
+          //AJOUTER UNE CONDITION AU CLIQUE DES BOUTONS GAUCHE EST DROIT
+          boutonDroit.addEventListener("click", function(){
+            if(compteurDeClique = 1){
+              imageModal.setAttribute("src", cheminsDesImages[5])
+              console.log(compteurDeClique)
+            }
+          })
+          ////////////////////////////////////////////////////////////////
         })
         boutonGauche.addEventListener("click", function(){
           alert("Bouton Gauche Cliquer")
@@ -330,20 +338,28 @@ function filtreModalMariage(){
             imageModal.setAttribute("src", cheminsDesImages[3])
             console.log(compteurDeClique)
           }
+          // AJOUTER UNE CONDITION AU CLIQUE DES BOUTONS GAUCHE EST DROIT
+          boutonGauche.addEventListener("click", function(){
+            if(compteurDeClique = 1){
+              imageModal.setAttribute("src", cheminsDesImages[3])
+              console.log(compteurDeClique)
+            }
+          })
+          //////////
         })
       }
       alert("mise ne place du style")
       }
     });
-    boutonConcert.addEventListener('click', function() {
+    boutonMariage.addEventListener('click', function() {
       // Ajoutez une classe pour indiquer que l'image-0 a été cliquée
-      image5.classList.add('CLIQUER');
-      image3.classList.add(`CLIQUER`);
+      image3.classList.add('CLIQUER');
+      image5.classList.add(`CLIQUER`);
       imageModal.classList.add("CLIQUER")
       alert("bouton concert CLIQUER")
       });
-      image3.addEventListener('click', function() {
-        if (image3.classList.contains('CLIQUER') && image5.classList.contains(`CLIQUER`)) {
+      image5.addEventListener('click', function() {
+        if (image5.classList.contains('CLIQUER') && image3.classList.contains(`CLIQUER`)) {
             //Condition qui dit que SI je clique sur le bouton droit, alors sa ouvre l'image 7 ou que sa clique un certain nombre de fois MAIS SEULEMENT si j'ai la classe CLIQUER
             if(imageModal.className.includes('CLIQUER')){
               let boutonDroit = document.getElementById("bouton-precedent");
@@ -355,6 +371,12 @@ function filtreModalMariage(){
                   imageModal.setAttribute("src", cheminsDesImages[5])
                   console.log(compteurDeClique)
                 }
+                //AJOUT 
+                if(compteurDeClique = 1){
+                  imageModal.setAttribute("src", cheminsDesImages[5])
+                  console.log(compteurDeClique)
+                }
+                ///////
               })
               boutonGauche.addEventListener("click", function(){
                 alert("Bouton Gauche Cliquer")
@@ -363,6 +385,12 @@ function filtreModalMariage(){
                   imageModal.setAttribute("src", cheminsDesImages[3])
                   console.log(compteurDeClique)
                 }
+                //AJOUT
+                if(compteurDeClique = 1){
+                  imageModal.setAttribute("src", cheminsDesImages[3])
+                  console.log(compteurDeClique)
+                }
+                ///////
               })
             }
             alert("mise ne place du style")
@@ -544,6 +572,14 @@ function filtreModalConcert(){
             imageModal.setAttribute("src", cheminsDesImages[7])
             console.log(compteurDeClique)
           }
+          //AJOUTER UNE CONDITION AU CLIQUE DES BOUTONS GAUCHE EST DROIT
+          boutonDroit.addEventListener("click", function(){
+            if(compteurDeClique = 1){
+              imageModal.setAttribute("src", cheminsDesImages[7])
+              console.log(compteurDeClique)
+            }
+          })
+          ////////////////////////////////////////////////////////////////
         })
         boutonGauche.addEventListener("click", function(){
           alert("Bouton Gauche Cliquer")
@@ -552,6 +588,14 @@ function filtreModalConcert(){
             imageModal.setAttribute("src", cheminsDesImages[0])
             console.log(compteurDeClique)
           }
+          // AJOUTER UNE CONDITION AU CLIQUE DES BOUTONS GAUCHE EST DROIT
+          boutonGauche.addEventListener("click", function(){
+            if(compteurDeClique = 1){
+              imageModal.setAttribute("src", cheminsDesImages[0])
+              console.log(compteurDeClique)
+            }
+          })
+          //////////
         })
       }
       alert("mise ne place du style")
@@ -577,6 +621,12 @@ function filtreModalConcert(){
                   imageModal.setAttribute("src", cheminsDesImages[7])
                   console.log(compteurDeClique)
                 }
+                //AJOUT 
+                if(compteurDeClique = 1){
+                  imageModal.setAttribute("src", cheminsDesImages[7])
+                  console.log(compteurDeClique)
+                }
+                ///////
               })
               boutonGauche.addEventListener("click", function(){
                 alert("Bouton Gauche Cliquer")
@@ -585,6 +635,12 @@ function filtreModalConcert(){
                   imageModal.setAttribute("src", cheminsDesImages[0])
                   console.log(compteurDeClique)
                 }
+                //AJOUT
+                if(compteurDeClique = 1){
+                  imageModal.setAttribute("src", cheminsDesImages[0])
+                  console.log(compteurDeClique)
+                }
+                ///////
               })
             }
             alert("mise ne place du style")
