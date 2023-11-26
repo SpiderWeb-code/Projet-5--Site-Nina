@@ -796,7 +796,7 @@ function filtreModalConcert(){
           }
           boutonDroit.addEventListener("click", function(){
             if(compteurDeClique = 1){
-              imageModal.setAttribute("src", cheminsDesImages[8])
+              imageModal.setAttribute("src", cheminsDesImages[7])
               console.log(compteurDeClique)
             }
           })
