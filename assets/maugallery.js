@@ -241,7 +241,6 @@ function filtreModalPortrait(){
         let boutonDroit = document.getElementById("bouton-precedent");
         let boutonGauche = document.getElementById("bouton-suivant");
         boutonDroit.addEventListener("click", function(){
-          alert("bouton Droit Cliquer")
           //Nombres de clique sur le bouton droit
           if(compteurDeClique = 1){
             imageModal.setAttribute("src", cheminsDesImages[6])
@@ -257,7 +256,6 @@ function filtreModalPortrait(){
           ////////////////////////////////////////////////////////////////
         })
         boutonGauche.addEventListener("click", function(){
-          alert("Bouton Gauche Cliquer")
           //Nombres de clique sur le bouton gauche
           if(compteurDeClique = 1){
             imageModal.setAttribute("src", cheminsDesImages[4])
@@ -273,7 +271,6 @@ function filtreModalPortrait(){
           //////////
         })
       }
-      alert("mise ne place du style")
       }
     });
     boutonPortrait.addEventListener('click', function() {
@@ -281,7 +278,6 @@ function filtreModalPortrait(){
       image4.classList.add('CLIQUER');
       image6.classList.add(`CLIQUER`);
       imageModal.classList.add("CLIQUER")
-      alert("bouton concert CLIQUER")
       });
       image6.addEventListener('click', function() {
         if (image6.classList.contains('CLIQUER') && image4.classList.contains(`CLIQUER`)) {
@@ -290,7 +286,6 @@ function filtreModalPortrait(){
               let boutonDroit = document.getElementById("bouton-precedent");
               let boutonGauche = document.getElementById("bouton-suivant");
               boutonDroit.addEventListener("click", function(){
-                alert("bouton Droit Cliquer")
                 //Nombres de clique sur le bouton droit
                 if(compteurDeClique = 1){
                   imageModal.setAttribute("src", cheminsDesImages[6])
@@ -304,7 +299,6 @@ function filtreModalPortrait(){
                 ///////
               })
               boutonGauche.addEventListener("click", function(){
-                alert("Bouton Gauche Cliquer")
                 //Nombres de clique sur le bouton gauche
                 if(compteurDeClique = 1){
                   imageModal.setAttribute("src", cheminsDesImages[4])
@@ -318,7 +312,6 @@ function filtreModalPortrait(){
                 ///////
               })
             }
-            alert("mise ne place du style")
             }
           });
           boutonPortrait.addEventListener('click', function() {
@@ -326,7 +319,6 @@ function filtreModalPortrait(){
             image4.classList.add('CLIQUER');
             image6.classList.add(`CLIQUER`);
             imageModal.classList.add("CLIQUER")
-            alert("bouton concert CLIQUER")
             });
     }
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// FILTRE MODAL MARIAGE
@@ -344,7 +336,6 @@ function filtreModalMariage(){
         let boutonDroit = document.getElementById("bouton-precedent");
         let boutonGauche = document.getElementById("bouton-suivant");
         boutonDroit.addEventListener("click", function(){
-          alert("bouton Droit Cliquer")
           //Nombres de clique sur le bouton droit
           if(compteurDeClique = 1){
             imageModal.setAttribute("src", cheminsDesImages[5])
@@ -360,7 +351,6 @@ function filtreModalMariage(){
           ////////////////////////////////////////////////////////////////
         })
         boutonGauche.addEventListener("click", function(){
-          alert("Bouton Gauche Cliquer")
           //Nombres de clique sur le bouton gauche
           if(compteurDeClique = 1){
             imageModal.setAttribute("src", cheminsDesImages[3])
@@ -376,7 +366,6 @@ function filtreModalMariage(){
           //////////
         })
       }
-      alert("mise ne place du style")
       }
     });
     boutonMariage.addEventListener('click', function() {
@@ -384,7 +373,6 @@ function filtreModalMariage(){
       image3.classList.add('CLIQUER');
       image5.classList.add(`CLIQUER`);
       imageModal.classList.add("CLIQUER")
-      alert("bouton concert CLIQUER")
       });
       image5.addEventListener('click', function() {
         if (image5.classList.contains('CLIQUER') && image3.classList.contains(`CLIQUER`)) {
@@ -393,7 +381,6 @@ function filtreModalMariage(){
               let boutonDroit = document.getElementById("bouton-precedent");
               let boutonGauche = document.getElementById("bouton-suivant");
               boutonDroit.addEventListener("click", function(){
-                alert("bouton Droit Cliquer")
                 //Nombres de clique sur le bouton droit
                 if(compteurDeClique = 1){
                   imageModal.setAttribute("src", cheminsDesImages[5])
@@ -407,7 +394,6 @@ function filtreModalMariage(){
                 ///////
               })
               boutonGauche.addEventListener("click", function(){
-                alert("Bouton Gauche Cliquer")
                 //Nombres de clique sur le bouton gauche
                 if(compteurDeClique = 1){
                   imageModal.setAttribute("src", cheminsDesImages[3])
@@ -421,7 +407,6 @@ function filtreModalMariage(){
                 ///////
               })
             }
-            alert("mise ne place du style")
             }
           });
           boutonMariage.addEventListener('click', function() {
@@ -429,7 +414,6 @@ function filtreModalMariage(){
             image3.classList.add('CLIQUER');
             image5.classList.add(`CLIQUER`);
             imageModal.classList.add("CLIQUER")
-            alert("bouton concert CLIQUER")
             });
     }
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// FILTRE MODAL ENTREPRISE
@@ -450,7 +434,6 @@ function filtreModalEntreprise(){
         let boutonDroit = document.getElementById("bouton-precedent");
         let boutonGauche = document.getElementById("bouton-suivant");
         boutonDroit.addEventListener("click", function(){
-          alert("bouton Droit Cliquer")
           //Nombres de clique sur le bouton droit
           if(compteurDeClique = 1){
             imageModal.setAttribute("src", cheminsDesImages[2])
@@ -464,7 +447,6 @@ function filtreModalEntreprise(){
           })
         })
         boutonGauche.addEventListener("click", function(){
-          alert("Bouton Gauche Cliquer")
           //Nombres de clique sur le bouton gauche
           if(compteurDeClique = 1){
             imageModal.setAttribute("src", cheminsDesImages[2])
@@ -476,7 +458,6 @@ function filtreModalEntreprise(){
           })
       })
     }
-    alert("mise ne place du style")
       }
     });
     image2.addEventListener('click', function() {
@@ -489,7 +470,6 @@ function filtreModalEntreprise(){
           let boutonDroit = document.getElementById("bouton-precedent");
           let boutonGauche = document.getElementById("bouton-suivant");
           boutonDroit.addEventListener("click", function(){
-            alert("bouton Droit Cliquer")
             //Nombres de clique sur le bouton droit
             if(compteurDeClique = 1){
               imageModal.setAttribute("src", cheminsDesImages[8])
@@ -497,7 +477,6 @@ function filtreModalEntreprise(){
             }
           })
           boutonGauche.addEventListener("click", function(){
-            alert("Bouton Gauche Cliquer")
             //Nombres de clique sur le bouton gauche
             if(compteurDeClique = 1){
               imageModal.setAttribute("src", cheminsDesImages[2])
@@ -507,17 +486,14 @@ function filtreModalEntreprise(){
                 console.log(compteurDeClique)
               }
             })
-              alert("bouton Droit Cliquer")
               //Nombres de clique sur le bouton droit
               boutonDroit.addEventListener("click", function(){
-                alert("bouton Droit Cliquer")
                 //Nombres de clique sur le bouton droit
                 if(compteurDeClique = 1){
                   imageModal.setAttribute("src", cheminsDesImages[2])
                   console.log(compteurDeClique)
                 }
                 boutonDroit.addEventListener("click", function(){
-                  alert("bouton Droit Cliquer")
                   //Nombres de clique sur le bouton droit
                   if(compteurDeClique = 1){
                     imageModal.setAttribute("src", cheminsDesImages[8])
@@ -527,7 +503,6 @@ function filtreModalEntreprise(){
               })
         })
       }
-      alert("mise ne place du style")
         }
       });
       image8.addEventListener('click', function() {
@@ -540,7 +515,6 @@ function filtreModalEntreprise(){
             let boutonDroit = document.getElementById("bouton-precedent");
             let boutonGauche = document.getElementById("bouton-suivant");
             boutonDroit.addEventListener("click", function(){
-              alert("bouton Droit Cliquer")
               //Nombres de clique sur le bouton droit
               if(compteurDeClique = 1){
                 imageModal.setAttribute("src", cheminsDesImages[2])
@@ -554,7 +528,6 @@ function filtreModalEntreprise(){
               })
             })
             boutonGauche.addEventListener("click", function(){
-              alert("Bouton Gauche Cliquer")
               //Nombres de clique sur le bouton gauche
               if(compteurDeClique = 1){
                 imageModal.setAttribute("src", cheminsDesImages[2])
@@ -566,7 +539,6 @@ function filtreModalEntreprise(){
               })
           })
         }
-        alert("mise ne place du style")
           }
         });
         boutonEntreprise.addEventListener('click', function() {
@@ -575,8 +547,6 @@ function filtreModalEntreprise(){
           image2.classList.add(`CLIQUER`);
           image8.classList.add(`CLIQUER`);
           imageModal.classList.add("CLIQUER")
-          alert("bouton entreprise CLIQUER")
-          
           });
 }
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// FILTRE MODAL CONCERT
@@ -594,7 +564,6 @@ function filtreModalConcert(){
         let boutonDroit = document.getElementById("bouton-precedent");
         let boutonGauche = document.getElementById("bouton-suivant");
         boutonDroit.addEventListener("click", function(){
-          alert("bouton Droit Cliquer")
           //Nombres de clique sur le bouton droit
           if(compteurDeClique = 1){
             imageModal.setAttribute("src", cheminsDesImages[7])
@@ -610,7 +579,6 @@ function filtreModalConcert(){
           ////////////////////////////////////////////////////////////////
         })
         boutonGauche.addEventListener("click", function(){
-          alert("Bouton Gauche Cliquer")
           //Nombres de clique sur le bouton gauche
           if(compteurDeClique = 1){
             imageModal.setAttribute("src", cheminsDesImages[0])
@@ -626,7 +594,6 @@ function filtreModalConcert(){
           //////////
         })
       }
-      alert("mise ne place du style")
       }
     });
     boutonConcert.addEventListener('click', function() {
@@ -634,7 +601,6 @@ function filtreModalConcert(){
       image0.classList.add('CLIQUER');
       image7.classList.add(`CLIQUER`);
       imageModal.classList.add("CLIQUER")
-      alert("bouton concert CLIQUER")
       });
       image7.addEventListener('click', function() {
         if (image0.classList.contains('CLIQUER') && image7.classList.contains(`CLIQUER`)) {
@@ -643,7 +609,6 @@ function filtreModalConcert(){
               let boutonDroit = document.getElementById("bouton-precedent");
               let boutonGauche = document.getElementById("bouton-suivant");
               boutonDroit.addEventListener("click", function(){
-                alert("bouton Droit Cliquer")
                 //Nombres de clique sur le bouton droit
                 if(compteurDeClique = 1){
                   imageModal.setAttribute("src", cheminsDesImages[7])
@@ -657,7 +622,6 @@ function filtreModalConcert(){
                 ///////
               })
               boutonGauche.addEventListener("click", function(){
-                alert("Bouton Gauche Cliquer")
                 //Nombres de clique sur le bouton gauche
                 if(compteurDeClique = 1){
                   imageModal.setAttribute("src", cheminsDesImages[0])
@@ -671,7 +635,6 @@ function filtreModalConcert(){
                 ///////
               })
             }
-            alert("mise ne place du style")
             }
           });
           boutonConcert.addEventListener('click', function() {
@@ -679,7 +642,6 @@ function filtreModalConcert(){
             image0.classList.add('CLIQUER');
             image7.classList.add(`CLIQUER`);
             imageModal.classList.add("CLIQUER")
-            alert("bouton concert CLIQUER")
             });
     }
 /////////////////////////////////////////////////////////////////////// Fait le clique automatique sur le bouton de la barre déroulente ///////////////////////////
