@@ -159,7 +159,6 @@ function openModal(){
   boutonDroit.style.padding = "0";
   boutonDroit.style.alignItems = "center";
   boutonDroit.style.justifyContent = "center";
-  boutonDroit.innerHTML = `<i class="fa-solid fa-square-caret-left" style="color: #000000;" id="bouton-gauche"></i> <p id="bouton-droit-modal">bouton Gauche Modal</p>`;
   boutonDroit.style.display = "flex";
   boutonGauche.style.display = "flex";
   boutonGauche.style.position = "absolute";
@@ -174,7 +173,6 @@ function openModal(){
   boutonGauche.style.padding = "0px 0px 0px 2px";
   boutonGauche.style.alignItems = "center";
   boutonGauche.style.justifyContent = "center";
-  boutonGauche.innerHTML = `<i class="fa-solid fa-square-caret-right" style="color: #000000;" id="bouton-droit"></i> <p id="bouton-gauche-modal">bouton Droit Modal</p>`;
   //Ferme la modal
   overlay.addEventListener("click", function(){
     closeModal()
@@ -1238,10 +1236,10 @@ document.body.appendChild(overlay);
 let modal = document.createElement("div");
 let boutonDroit = document.createElement("button");
 boutonDroit.id = "bouton-suivant";
-boutonDroit.setAttribute("value", "bouton gauche de la modal")
+boutonDroit.innerHTML = `<i class="fa-solid fa-square-caret-left" style="color: #000000;" id="bouton-gauche"></i> <p id="bouton-droit-modal">bouton Gauche Modal</p>`;
 let boutonGauche = document.createElement("button");
 boutonGauche.id = "bouton-precedent";
-boutonGauche.setAttribute("value", "bouton droit de la modal")
+boutonGauche.innerHTML = `<i class="fa-solid fa-square-caret-right" style="color: #000000;" id="bouton-droit"></i> <p id="bouton-gauche-modal">bouton Droit Modal</p>`;
 
 // Ajout des écouteurs d'événements aux boutons
 boutonGauche.addEventListener("click", imageSuivante);
