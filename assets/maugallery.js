@@ -229,6 +229,7 @@ function imagePrecedente() {
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// FILTRES MODAL PORTRAIT
 function filtreModalPortrait(){
   let imageModal = document.getElementById("image-modal");
+  imageModal.setAttribute("alt", "image filtrés par la modal");
   let image4 = document.getElementById('image-4');
   let image6 = document.getElementById("image-6");
   let compteurDeClique = 0
@@ -419,6 +420,7 @@ function filtreModalPortrait(){
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// FILTRE MODAL MARIAGE
 function filtreModalMariage(){
   let imageModal = document.getElementById("image-modal");
+  imageModal.setAttribute("alt", "image filtrés par la modal");
   let image3 = document.getElementById('image-3');
   let image5 = document.getElementById("image-5");
   let compteurDeClique = 0
@@ -609,6 +611,7 @@ function filtreModalMariage(){
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// FILTRE MODAL ENTREPRISE
 function filtreModalEntreprise(){
   let imageModal = document.getElementById("image-modal");
+  imageModal.setAttribute("alt", "image filtrés par la modal");
   let image1 = document.getElementById("image-1");
   let image2 = document.getElementById("image-2");
   let image8= document.getElementById("image-8");
@@ -746,6 +749,7 @@ function filtreModalEntreprise(){
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// FILTRE MODAL CONCERT
 function filtreModalConcert(){
   let imageModal = document.getElementById("image-modal");
+  imageModal.setAttribute("alt", "images filtrés par la modal");
   let image0 = document.getElementById('image-0');
   let image7 = document.getElementById("image-7");
   let compteurDeClique = 0
@@ -1082,7 +1086,6 @@ couleursBoutons.forEach(bouton => {
 });
 
 /////////////////////////////////////////////////////////////////////// Création des images ///////////////////////////////////////////////////////////////////////////
-
 // Récupérez l'élément parent des images
 const imagesContainer = document.getElementById("gallery-image");
 
