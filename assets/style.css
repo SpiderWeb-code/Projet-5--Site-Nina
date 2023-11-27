@@ -160,10 +160,10 @@ body {max-width: 1920px;margin: auto;}
 .modal-body{display: flex;justify-content: center;}
 /************************* AJOUT */
 #bouton-droit-modal{
-  display: none;
+  
 }
 #bouton-gauche-modal{
-  display: none;
+  
 }
 /********************************/
 form {display: flex;flex-direction: column;width: 70%;align-items: flex-start;}
