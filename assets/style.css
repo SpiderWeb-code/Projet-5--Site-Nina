@@ -158,6 +158,14 @@ body {max-width: 1920px;margin: auto;}
 .form-container {flex : 2;}.next span{background-color: grey;height: 37px;width: 37px;border: 5px solid grey;border-radius: 5px;}
 .prev span{background-color: gray;height: 37px;width: 37px;border: 5px solid grey;border-radius: 5px;}
 .modal-body{display: flex;justify-content: center;}
+/************************* AJOUT */
+#bouton-droit-modal{
+  display: none;
+}
+#bouton-gauche-modal{
+  display: none;
+}
+/********************************/
 form {display: flex;flex-direction: column;width: 70%;align-items: flex-start;}
 form input {width: 100%;background-color: transparent;border: solid 1px;height: 2.5em;margin-bottom: 20px;}
 form textarea {width: 100%;background-color: transparent;border: solid 1px;height: 5em;line-height: 2.5em;font-size: 1.2em;margin-bottom: 20px;}

@@ -159,7 +159,7 @@ function openModal(){
   boutonDroit.style.padding = "0";
   boutonDroit.style.alignItems = "center";
   boutonDroit.style.justifyContent = "center";
-  boutonDroit.innerHTML = `<i class="fa-solid fa-square-caret-left" style="color: #000000;" id="bouton-gauche"></i>`;
+  boutonDroit.innerHTML = `<i class="fa-solid fa-square-caret-left" style="color: #000000;" id="bouton-gauche"></i><p id="bouton-droit-modal">bouton droit</p>`;
   boutonDroit.style.display = "flex";
   boutonGauche.style.display = "flex";
   boutonGauche.style.position = "absolute";
@@ -174,7 +174,7 @@ function openModal(){
   boutonGauche.style.padding = "0px 0px 0px 2px";
   boutonGauche.style.alignItems = "center";
   boutonGauche.style.justifyContent = "center";
-  boutonGauche.innerHTML = `<i class="fa-solid fa-square-caret-right" style="color: #000000;" id="bouton-droit"></i>`;
+  boutonGauche.innerHTML = `<i class="fa-solid fa-square-caret-right" style="color: #000000;" id="bouton-droit"></i><p id="bouton-gauche-modal">bouton droit</p>`;
   //Ferme la modal
   overlay.addEventListener("click", function(){
     closeModal()
