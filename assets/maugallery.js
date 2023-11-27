@@ -1241,7 +1241,7 @@ boutonDroit.id = "bouton-suivant";
 boutonDroit.setAttribute("value", "bouton gauche de la modal")
 let boutonGauche = document.createElement("button");
 boutonGauche.id = "bouton-precedent";
-boutonDroit.setAttribute("value", "bouton droit de la modal")
+boutonGauche.setAttribute("value", "bouton droit de la modal")
 
 // Ajout des écouteurs d'événements aux boutons
 boutonGauche.addEventListener("click", imageSuivante);
