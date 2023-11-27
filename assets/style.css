@@ -83,7 +83,7 @@ body {max-width: 1920px;margin: auto;}
   opacity: 0.5;
   transition: opacity 0.15s ease;
 }
-.prev p{
+#bouton-droit-supp{
   display: none;
 }
 .carousel-control-prev-icon{
@@ -114,7 +114,7 @@ body {max-width: 1920px;margin: auto;}
   opacity: 0.5;
   transition: opacity 0.15s ease;
 }
-.next p{
+#bouton-gauche-supp{
   display: none;
 }
 /*Mise en place du style CSS pour les Boutons Filtres*/
