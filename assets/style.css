@@ -14,7 +14,7 @@ body {max-width: 1920px;margin: auto;}
 .about-me__title {margin-bottom: 60px; font-size: 30px; font-weight: 100;}
 .about-me__introduction {font-family: 'Spectral';font-weight: 800;font-style: italic;width: 60%; font-size: 16px;}
 #about-me p {width: 80%;font-size: 14px;}
-#gallery{}
+
 .title{text-align: center;padding-block: 2em;font-size: 28px; font-weight: 500;}
 .gallery .nav {justify-content: center;}
 .nav-pills .nav-link.active-tag{background-color: #000000;color: white;}
@@ -165,6 +165,11 @@ body {max-width: 1920px;margin: auto;}
 #bouton-gauche-modal{
   display: none;
 }
+/* MODAL */
+#myModal{
+ max-width: 498px;
+ height : 653.33px;
+}
 /********************************/
 form {display: flex;flex-direction: column;width: 70%;align-items: flex-start;}
 form input {width: 100%;background-color: transparent;border: solid 1px;height: 2.5em;margin-bottom: 20px;}
@@ -181,8 +186,9 @@ input[type="submit"] {background-color: #BEB45A;padding: .5em 1em }
 @media all and (max-width: 821px){.images_gallery{max-height: 270px;}#gallery-image{grid-template-columns: repeat(3, 1fr);max-width: 700px;}.service{max-width: 700px; width: 100%;}}
 @media all and (max-width: 767px){#gallery-image{grid-template-columns: repeat(2, 1fr);}#gallery-image{max-width: 554px;}.service{max-width: 600px; width: 100%;}}
 /****************************************************/
-@media all and (max-width: 650px) {.top-header {flex-direction: column;padding-inline: 0;}.top-header .nav, .top-header .nav ul {width: 100%;padding: 0 0 0 0;}.top-header .nav li {flex: 1;padding-block: 1em;text-align: center;}.picture.left::before, .picture.right::before {height: 150px;}#services .container {align-items: center;}.service {max-width: 90%;}#about, #contact {padding-inline: 2em;padding-block: 2em;}form {width: 100%;}.picture {width: 80%;}.form-container h2{text-align: center;}.form-container p{text-align: center;}}
+@media all and (max-width: 650px) {.top-header {flex-direction: column;padding-inline: 0;}.top-header .nav, .top-header .nav ul {width: 100%;padding: 0 0 0 0;}.top-header .nav li {flex: 1;padding-block: 1em;text-align: center;}.picture.left::before, .picture.right::before {height: 150px;}#services .container {align-items: center;}.service {max-width: 90%;}#about, #contact {padding-inline: 2em;padding-block: 2em;}form {width: 100%;}.picture {width: 80%;}.form-container h2{text-align: center;}.form-container p{text-align: center;} #myModal{height: 550px; max-width: 400px;}}
 /*Ajout de media pour avoir une bonne taille d'image en version Mobile*/
-@media all and (max-width: 577px){#gallery-image{display: flex; flex-direction: column; align-items: center; padding-left: 10px; padding-right: 10px;}.service{max-width: 300px; width: 100%;}.quote__text{font-size: 25px;}.images_gallery{height: 250px; width: 250px;}}
+@media all and (max-width: 577px){#gallery-image{display: flex; flex-direction: column; align-items: center; padding-left: 10px; padding-right: 10px;}.service{max-width: 300px; width: 100%;}.quote__text{font-size: 25px;}.images_gallery{height: 250px; width: 250px;}#myModal{height: 350px; max-width: 250px;}}
+@media all and (max-width: 400px){#myModal{height: 250px; max-width: 150px;}}
 @media all and (max-width: 375px){.service{max-width: 200px; width: 100%; text-align: center;}#about-me{text-align: center;}}
 /****************************************************/

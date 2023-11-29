@@ -131,9 +131,7 @@ function openModal(){
   modal.style.border = "4px solid rgb(190, 180, 90)";
   modal.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.1)";
   modal.style.zIndex = "3";
-  modal.style.maxWidth = "498px";
   modal.style.width = "100%";
-  modal.style.height = "653.33px";
   modal.style.display = "flex";
   modal.style.justifyContent = "center";
   modal.style.alignItems = "center";
