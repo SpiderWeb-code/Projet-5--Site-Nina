@@ -3,8 +3,7 @@ body {
     margin: auto;
 }
 * {
-    font-family: "Inter";
-    font-style: normal;
+    font-family: "Arial";
 }
 .top-header {
     background-color: white;
@@ -73,8 +72,6 @@ body {
     font-weight: 100;
 }
 .about-me__introduction {
-    font-family: "Spectral";
-    font-weight: 800;
     font-style: italic;
     width: 60%;
     font-size: 16px;
